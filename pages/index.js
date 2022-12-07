@@ -13,11 +13,11 @@ export default function Home() {
           <img src="logo.png"/>
         </div>
         <ul className={styles.rightNav}>
-          <li>925.Wear</li>
-          <li>About</li>
+          <li><a href="#wear">925.Wear</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
-      <div className={styles.firstSection}>
+      <div id="wear" className={styles.firstSection}>
         <Carousel showThumbs={false} autoPlay>
           <div>
             <img src="firstpic.png"/>
@@ -30,11 +30,11 @@ export default function Home() {
           </div>
         </Carousel>
       </div>
-      <div className={styles.secondSection}>
+      <div id="about" className={styles.secondSection}>
 
       </div>
       <div className={styles.thirdSection}>
-        
+
       </div>
     </div>
   )
