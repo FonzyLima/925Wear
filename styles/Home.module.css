@@ -1,0 +1,31 @@
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #262626;
+  color:#FFFFFF;
+
+}
+.leftNav{
+  margin: 0;
+  padding: 0;
+}
+.rightNav{
+  justify-content:space-between;
+  font-size: 28px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rightNav > li{
+  margin-left: 60px;
+  float: left;
+}
+
+.firstSection{
+  height: 100%;
+  width: 100%;
+}
