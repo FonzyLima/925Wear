@@ -30,6 +30,12 @@ export default function Home() {
           </div>
         </Carousel>
       </div>
+      <div className={styles.secondSection}>
+
+      </div>
+      <div className={styles.thirdSection}>
+        
+      </div>
     </div>
   )
 }
