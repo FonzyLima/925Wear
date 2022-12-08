@@ -38,7 +38,7 @@ export default function Home() {
           Collection 01:
         </div>
         <div className="collectionTitle">
-
+    
         </div>
       </div>
       <div className={styles.thirdSection}>
