@@ -28,10 +28,18 @@ export default function Home() {
           <div>
             <img src="thirdpic.png"/>
           </div>
+          <div>
+            <img src="fourthpic.png"/>
+          </div>
         </Carousel>
       </div>
       <div id="about" className={styles.secondSection}>
+        <div className="collectionHeading">
+          Collection 01:
+        </div>
+        <div className="collectionTitle">
 
+        </div>
       </div>
       <div className={styles.thirdSection}>
 
