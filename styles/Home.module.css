@@ -2,6 +2,7 @@
   position:fixed;
   top:0;
   width:100%;
+  height:115px;
   z-index: 5;
   display: flex;
   flex-direction: row;
@@ -34,8 +35,11 @@
 }
 
 .secondSection {
-  margin: 50px 0;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
 }
 .slogan {
   max-width: 100%;
@@ -51,6 +55,7 @@
 }
 
 .clotheCarousel {
+  width: 100%;
 }
 .card {
   text-align: center;
@@ -69,7 +74,6 @@
   margin-bottom: 80px;
 }
 .secondParagraph {
-  margin: auto;
   width: 60%;
   font-size: 26px;
   font-weight: 500;
@@ -77,16 +81,20 @@
 }
 
 .thirdSection {
-  margin: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height:100vh;
+  border: 2px solid black;
+}
+
+.logopic {
+  border: 2px solid black;
 }
 
 .thirdParagraph{
-  margin: auto;
+  margin: 20px;
   width: 60%;
   font-size: 26px;
   font-weight: 500;
@@ -96,12 +104,13 @@
   flex-direction: row;
   justify-content:space-evenly;
   text-align: justify;
+  width:80%;
 }
 .interviewText{
-  width: 25%;
+  width: 350px;
   font-size: 22px;
   font-style:italic;
 }
 .interviewPic{
-  width:25%;
+  width:220px;
 }
