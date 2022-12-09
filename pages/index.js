@@ -76,10 +76,19 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
         <div className={styles.secondParagraph}>
-          Our first collection features <strong><em>Relaxed Workwear</em></strong> made from a lightweight
-          and breathable cotton-linen blend. Wear it in the city or at the
-          beach; on a night out, or on a mellow Sunday afternoon. Versatile
-          pieces for the modern Filipino’s ever-changing environment
+          Our first collection features{" "}
+          <strong>
+            <em>Relaxed Workwear</em>
+          </strong>{" "}
+          made from a lightweight and breathable cotton-linen blend. Wear it in
+          the city or at the beach; on a night out, or on a mellow Sunday
+          afternoon. Versatile pieces for the modern Filipino’s ever-changing
+          environment
+        </div>
+      </div>
+      <div className={styles.thirdSection}>
+        <div className={styles.logopic}>
+          <img src="925-main-logo.png" />
         </div>
       </div>
       <div className={styles.thirdSection}></div>
