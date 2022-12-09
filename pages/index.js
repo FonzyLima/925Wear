@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+
 export default function Home() {
   return (
     <div>
@@ -44,10 +45,18 @@ export default function Home() {
         </div>
         <Swiper
           className={styles.clotheCarousel}
-          spaceBetween={5}
+          spaceBetween={60}
           slidesPerView={4}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+          }}
         >
           <SwiperSlide className={styles.card}>
             <img className={styles.clothes} src="green.png" />
@@ -100,22 +109,26 @@ export default function Home() {
         </div>
         <div className={styles.interview}>
           <div className={styles.interviewText}>
-            “Whats your biggest fear?” <br/> <br/>
-            “Getting stuck behind a desk, 9-to-5, 5 days <br/>
-            a week, all year long.<br/> 
-            Working a job you cant stand.<br/>
-            That shit scares me.<br/>
-            But thats how it goes, you gotta survive.” <br/><br/>
+            “Whats your biggest fear?” <br /> <br />
+            “Getting stuck behind a desk, 9-to-5, 5 days <br />
+            a week, all year long.
+            <br />
+            Working a job you cant stand.
+            <br />
+            That shit scares me.
+            <br />
+            But thats how it goes, you gotta survive.” <br />
+            <br />
             <strong>(Untitled Interview, n.d.)</strong>
           </div>
           <div className={styles.interviewPic}>
-            <img src="why1.png"/>
+            <img src="why1.png" />
           </div>
           <div className={styles.interviewPic}>
-            <img src="why2.png"/>
+            <img src="why2.png" />
           </div>
           <div className={styles.interviewPic}>
-          <img src="why3.png"/>
+            <img src="why3.png" />
           </div>
         </div>
       </div>
