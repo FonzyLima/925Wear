@@ -15,3 +15,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Adobe";
+  src: url('../fonts/AdobeDevanagari-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url('../fonts/HelveticaNowText-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
