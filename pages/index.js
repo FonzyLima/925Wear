@@ -90,8 +90,23 @@ export default function Home() {
         <div className={styles.logopic}>
           <img src="925-main-logo.png" />
         </div>
+        <div className={styles.thirdParagraph}>
+          925 Studio is a Manila-based design house founded by siblings, Raf and
+          Bianca Evangelista. The brand is fueled by their desire to create.
+          Thus, 925 Studio was built to house various outlets of expression
+          through sub-brands– may it be clothing, music, graphic design, or home
+          accessories. 925 is all about doing what you love, or rather, the fear
+          of not pursuing it.
+        </div>
+        <div className={styles.interview}>
+          <div className={styles.interviewText}>
+            “What’s your biggest fear?” “Getting stuck behind a desk, 9-to-5, 5
+            days a week, all year long. Working a job you can’t stand. That shit
+            scares me. But that's how it goes, you gotta survive.” 
+            (Untitled Interview, n.d.)
+          </div>
+        </div>
       </div>
-      <div className={styles.thirdSection}></div>
     </div>
   );
 }
