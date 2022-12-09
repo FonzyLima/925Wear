@@ -22,7 +22,7 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <div id="wear" className={styles.firstSection}>
+      <div className={styles.firstSection}>
         <Carousel showThumbs={false} autoPlay>
           <div>
             <img src="firstpic.png" />
