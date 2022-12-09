@@ -69,7 +69,7 @@ export default function Home() {
             <p className={styles.clothePrice}>Php 1,100</p>
           </SwiperSlide>
           <SwiperSlide className={styles.card}>
-            <img className={styles.clothes} src="whiteshort.png" />
+            <img className={styles.clothes} src="blueshort.png" />
             <p className={styles.clotheTitle}>925 Cotton-Linen Shorts</p>
             <p className={styles.clothePrice}>Php 700</p>
           </SwiperSlide>
@@ -79,9 +79,64 @@ export default function Home() {
             <p className={styles.clothePrice}>Php 800</p>
           </SwiperSlide>
           <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="green.png" />
+            <p className={styles.clotheTitle}>925 Work Polo</p>
+            <p className={styles.clothePrice}>Php 1,400</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
             <img className={styles.clothes} src="blackpolo.png" />
             <p className={styles.clotheTitle}>925 Work Polo</p>
             <p className={styles.clothePrice}>Php 1,400</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="whitepolo.png" />
+            <p className={styles.clotheTitle}>925 Work Polo</p>
+            <p className={styles.clothePrice}>Php 1,400</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="bluepolo.png" />
+            <p className={styles.clotheTitle}>925 Work Polo</p>
+            <p className={styles.clothePrice}>Php 1,400</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="greenpants.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Pants</p>
+            <p className={styles.clothePrice}>Php 1,100</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="blackpant.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Pants</p>
+            <p className={styles.clothePrice}>Php 1,100</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="whitepants.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Pants</p>
+            <p className={styles.clothePrice}>Php 1,100</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="greenpants.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Pants</p>
+            <p className={styles.clothePrice}>Php 1,100</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="greenshort.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Shorts</p>
+            <p className={styles.clothePrice}>Php 700</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="blackshort.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Shorts</p>
+            <p className={styles.clothePrice}>Php 700</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="greenshort.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Shorts</p>
+            <p className={styles.clothePrice}>Php 700</p>
+          </SwiperSlide>
+          <SwiperSlide className={styles.card}>
+            <img className={styles.clothes} src="blueshort.png" />
+            <p className={styles.clotheTitle}>925 Cotton-Linen Shorts</p>
+            <p className={styles.clothePrice}>Php 700</p>
           </SwiperSlide>
         </Swiper>
         <div className={styles.secondParagraph}>
