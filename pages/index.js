@@ -100,10 +100,21 @@ export default function Home() {
         </div>
         <div className={styles.interview}>
           <div className={styles.interviewText}>
-            “What’s your biggest fear?” “Getting stuck behind a desk, 9-to-5, 5
-            days a week, all year long. Working a job you can’t stand. That shit
-            scares me. But that's how it goes, you gotta survive.” 
-            (Untitled Interview, n.d.)
+            “What’s your biggest fear?” <br/> <br/>
+            “Getting stuck behind a desk, 9-to-5, 5 days
+            a week, all year long. Working a job you can’t stand.
+            That shit scares me. But that's how it goes,
+            you gotta survive.” <br/><br/>
+            <strong>(Untitled Interview, n.d.)</strong>
+          </div>
+          <div className={styles.interviewPic}>
+            <img src="why1.png"/>
+          </div>
+          <div className={styles.interviewPic}>
+            <img src="why2.png"/>
+          </div>
+          <div className={styles.interviewPic}>
+          <img src="why3.png"/>
           </div>
         </div>
       </div>
