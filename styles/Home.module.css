@@ -2,7 +2,7 @@
   position:fixed;
   top:0;
   width:100%;
-  height:115px;
+  height:90px;
   z-index: 5;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  margin-top: 115px;
+  margin-top: 90px;
 }
 
 .carouselText {
@@ -153,6 +153,15 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .rightNav{
+    display: none;
+  }
+  .secondParagraph{
+    font-size: 22px;
+  }
+  .thirdParagraph{
+    font-size:22px;
+  }
   .interview {
     flex-wrap: wrap;
   }

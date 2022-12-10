@@ -59,6 +59,7 @@ export default function Home() {
           breakpoints={{
             300: {
               slidesPerView: 1,
+              slidesPerGroup: 1,
             },
             768: {
               slidesPerView: 4,
