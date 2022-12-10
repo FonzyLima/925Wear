@@ -55,7 +55,7 @@ export default function Home() {
           slidesPerView={4}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 4000 }}
           breakpoints={{
             300: {
               slidesPerView: 1,
