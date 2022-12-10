@@ -5,8 +5,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
+import SwiperCore, { Autoplay } from 'swiper';
 export default function Home() {
+  SwiperCore.use([Autoplay])
   return (
     <div>
       <Head>
@@ -54,12 +55,14 @@ export default function Home() {
           slidesPerView={4}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          autoplay={{ delay: 3000 }}
           breakpoints={{
             300: {
               slidesPerView: 1,
             },
             768: {
               slidesPerView: 4,
+              slidesPerGroup: 4,
             },
           }}
         >
