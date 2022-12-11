@@ -123,7 +123,7 @@ export default function Home() {
             <p className={styles.clothePrice}>Php 1,100</p>
           </SwiperSlide>
           <SwiperSlide className={styles.card}>
-            <img className={styles.clothes} src="greenpants.png" />
+            <img className={styles.clothes} src="bluepants.png" />
             <p className={styles.clotheTitle}>925 Cotton-Linen Pants</p>
             <p className={styles.clothePrice}>Php 1,100</p>
           </SwiperSlide>
@@ -138,7 +138,7 @@ export default function Home() {
             <p className={styles.clothePrice}>Php 700</p>
           </SwiperSlide>
           <SwiperSlide className={styles.card}>
-            <img className={styles.clothes} src="greenshort.png" />
+            <img className={styles.clothes} src="whiteshort.png" />
             <p className={styles.clotheTitle}>925 Cotton-Linen Shorts</p>
             <p className={styles.clothePrice}>Php 700</p>
           </SwiperSlide>
@@ -157,6 +157,12 @@ export default function Home() {
           the city or at the beach; on a night out, or on a mellow Sunday
           afternoon. Versatile pieces for the modern Filipino’s ever-changing
           environment
+        </div>
+        <div className={styles.signButtonContainer}>
+          <a href="https://form.jotform.com/223442419793461" rel="noreferrer" target="_blank">
+            <button className={styles.signButton}>Order Now</button>
+          </a>
+          
         </div>
       </div>
       <div id="about" className={styles.thirdSection}>
