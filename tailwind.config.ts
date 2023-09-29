@@ -7,8 +7,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      primary: ["Satoshi, sans-serif"],
+      brand: ["Inter, sans-serif"],
+    },
     colors: {
-      beige: "#F7F5ED",
+      white: "#F7F5ED",
+      beige: "#EFE9D2",
       yellowgreen: "#CFC800",
       black: "#222222",
     },
