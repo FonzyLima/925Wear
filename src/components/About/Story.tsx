@@ -48,7 +48,7 @@ const Story = () => {
               develop sub-brands whether it be clothing, videography, music, or
               home accessories.
             </div>
-            <div className="text-[30px] font-primary bg-yellowgreen w-[252px] flex justify-center rounded-[50px] hover:cursor-pointer mt-[20px]">Learn More</div>
+            <div className="text-[30px] h-[75px] font-primary bg-yellowgreen w-[252px] flex justify-center items-center rounded-[50px] hover:cursor-pointer mt-[20px]">Learn More</div>
           </div>
           <div className="w-2/5">
             <Image
@@ -78,7 +78,7 @@ const Story = () => {
               collections, the brand values producing limited high-quality
               pieces with each release.
             </div>
-            <div className="text-[30px] bg-black text-white w-[252px] flex justify-center rounded-[50px] hover:cursor-pointer mt-[20px]">Learn More</div>
+            <div className="text-[30px] h-[75px] bg-black text-white w-[252px] flex justify-center items-center rounded-[50px] hover:cursor-pointer mt-[20px]">Learn More</div>
           </div>
         </div>
       </div>
