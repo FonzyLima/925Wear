@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Nav from "@/components/Shared/Nav";
+import 'react-responsive-carousel/lib/styles/carousel.min.css' 
 
 export const metadata: Metadata = {
   title: "925Wear",
