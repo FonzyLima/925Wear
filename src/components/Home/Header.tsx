@@ -21,7 +21,7 @@ const Header = () => {
             return (
               <span
                 className={` ml-[10px] w-[10px] h-[10px] bg-white ${
-                  isSelected ? "bg-white" : "bg-yellowgreen"
+                  isSelected ? "bg-yellowgreen" : "bg-white"
                 } inline-block rounded-full`}
                 onClick={onClickHandler}
                 onKeyDown={onClickHandler}
