@@ -9,70 +9,65 @@ const Header = () => {
   return (
     <>
       <div className="w-full pt-[95px] px-[40px] bg-white font-primary">
-        <div className="w-full flex justify-center relative overflow-hidden  rounded-[30px]">
-          <Carousel
-            className=""
-            autoPlay={true}
-            interval={4000}
-            infiniteLoop={true}
-            showStatus={false}
-            emulateTouch={true}
-            showThumbs={false}
-            renderIndicator={(onClickHandler, isSelected, index, label) => {
-              return (
-                <span
-                  className={` ml-[10px] w-[10px] h-[10px] ${
-                    isSelected ? "bg-seafoam" : "bg-spaceCadet"
-                  } inline-block rounded-full`}
-                  onClick={onClickHandler}
-                  onKeyDown={onClickHandler}
-                  key={index}
-                  role="button"
-                  tabIndex={0}
-                  aria-label={`${label} ${index + 1}`}
-                >
-                  .
-                </span>
-              );
-            }}
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <button
-                  className="z-10 absolute flex items-center justify-center top-1/2 -translate-y-1/2 w-[48px] h-[48px] right-0 bg-[#020512] bg-opacity-0"
-                  type="button"
-                  onClick={onClickHandler}
-                  title={label}
-                ></button>
-              )
-            }
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <button
-                  type="button"
-                  onClick={onClickHandler}
-                  title={label}
-                  className="z-10 absolute flex items-center justify-center top-1/2 -translate-y-1/2 w-[48px] h-[48px] left-0 bg-[#020512] bg-opacity-0"
-                ></button>
-              )
-            }
-          >
-            <Image
-              src={sample}
-              alt="header"
-              objectFit="cover"
-              className=" object-cover"
-            />
-            <HomepageCarouselItem
-              title="SHOP NEW COLLECTION"
-              subtitle="g"
-              description="d"
-              desktopImageSrc={sample}
-              mobileImageSrc={sample}
-              buttonText="f"
-              buttonUrl="/hi"
-            />
-          </Carousel>
-        </div>
+        <Carousel
+          className="w-full flex justify-center relative overflow-hidden h-full rounded-[30px]"
+          autoPlay={true}
+          interval={4000}
+          infiniteLoop={true}
+          showStatus={false}
+          emulateTouch={true}
+          showThumbs={false}
+          renderIndicator={(onClickHandler, isSelected, index, label) => {
+            return (
+              <span
+                className={` ml-[10px] w-[10px] h-[10px] bg-white ${
+                  isSelected ? "bg-white" : "bg-yellowgreen"
+                } inline-block rounded-full`}
+                onClick={onClickHandler}
+                onKeyDown={onClickHandler}
+                key={index}
+                role="button"
+                tabIndex={0}
+                aria-label={`${label} ${index + 1}`}
+              ></span>
+            );
+          }}
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <button
+                className="z-10 absolute flex items-center justify-center top-1/2 -translate-y-1/2 w-[48px] h-[48px] right-0 bg-[#020512] bg-opacity-0"
+                type="button"
+                onClick={onClickHandler}
+                title={label}
+              ></button>
+            )
+          }
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <button
+                type="button"
+                onClick={onClickHandler}
+                title={label}
+                className="z-10 absolute flex items-center justify-center top-1/2 -translate-y-1/2 w-[48px] h-[48px] left-0 bg-[#020512] bg-opacity-0"
+              ></button>
+            )
+          }
+        >
+          <HomepageCarouselItem
+            title="SHOP NEW COLLECTION"
+            desktopImageSrc={sample}
+            mobileImageSrc={sample}
+            buttonText="See more"
+            buttonUrl="/store"
+          />
+          <HomepageCarouselItem
+            title="SHOP NEW COLLECTION"
+            desktopImageSrc={sample}
+            mobileImageSrc={sample}
+            buttonText="See more"
+            buttonUrl="/store"
+          />
+        </Carousel>
       </div>
     </>
   );
@@ -82,8 +77,6 @@ export default Header;
 
 interface IHomepageCarousel {
   title: string | JSX.Element;
-  subtitle: string;
-  description: string | JSX.Element;
   desktopImageSrc: HTMLImageElement | string | StaticImageData;
   mobileImageSrc?: HTMLImageElement | string | StaticImageData;
   buttonText?: string;
@@ -92,34 +85,25 @@ interface IHomepageCarousel {
 
 function HomepageCarouselItem({
   title,
-  subtitle,
-  description,
   desktopImageSrc,
   mobileImageSrc,
   buttonText,
   buttonUrl,
 }: IHomepageCarousel) {
   return (
-    <div className="flex flex-col items-start h-full justify-center align-middle text-center overflow-hidden">
-      <div className="flex flex-col justify-center items-start z-10 h-full">
-        {/* <h3 className="text-[#00E9BA] text-[10px] lg:text-sm leading-[87%] tracking-[4px] mb-2 uppercase">
-          {subtitle}
-        </h3> */}
-        <div className="z-10 px-[60px] font-black text-white text-[60px]">
-          {title}
-        </div>
-        {/* <h2 className="text-[32px] lg:text-[56px] leading-[%] font-bold mb-[9px] max-w-[300px] lg:max-w-none">
-          {title}
-        </h2> */}
-        {/* <div className="text-sm lg:text-base font-normal leading-[130%] font-secondary max-w-[352px] lg:max-w-[500px] text-neutral-5 mb-[28px]">
-          {description}
-        </div> */}
-
-        {/* {!!buttonText && !!buttonUrl && (
-          <a href={buttonUrl} rel="noopener noreferrer" target="_blank">
+    <div className="flex flex-col border min-h-[500px] items-start h-full justify-center align-middle text-center overflow-hidden">
+      <div className="flex flex-col justify-center items-start z-10 h-full px-[60px]">
+        <div className="z-10 font-black text-white text-[60px] text-left">{title}</div>
+        {!!buttonText && !!buttonUrl && (
+          <a
+            href={buttonUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="px-6 py-2 border text-white text-[20px] rounded-full font-bold"
+          >
             {buttonText}
           </a>
-        )} */}
+        )}
       </div>
       <Image
         src={desktopImageSrc}
@@ -127,7 +111,7 @@ function HomepageCarouselItem({
         objectFit="cover"
         layout="fill"
         quality={90}
-        className="hidden lg:!flex h-full border"
+        className="hidden lg:!flex"
       />
       <Image
         src={mobileImageSrc ? mobileImageSrc : desktopImageSrc}
@@ -135,7 +119,7 @@ function HomepageCarouselItem({
         objectFit="cover"
         layout="fill"
         quality={90}
-        className="lg:!hidden h-full"
+        className="lg:!hidden"
       />
     </div>
   );
