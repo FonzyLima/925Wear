@@ -8,6 +8,8 @@ const cards = [
   { title: "Card 2", description: "Description 2" },
   { title: "Card 3", description: "Description 3" },
   { title: "Card 4", description: "Description 4" },
+  { title: "Card 5", description: "Description 4" },
+  { title: "Card 6", description: "Description 4" },
 ];
 
 interface CardProps {
@@ -29,8 +31,8 @@ const CardSlider: React.FC<CardSliderProps> = ({
   onNextCard,
 }) => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex space-x-4">
+    <div className="flex relative items-center justify-center w-full overflow-visible">
+      <div className="flex flex-row gap-[20px] w-full">
         {visibleIndices.map((index) => (
           <Card key={index} {...cards[index]} />
         ))}
@@ -62,14 +64,19 @@ const HomeShop = () => {
             EXPLORE THE COLLECTION
           </div>
           <div className="flex flex-row gap-[10px]">
-          <button onClick={prevCard} className="text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px]">
-            &larr;
-          </button>
-          <button onClick={nextCard} className="text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px]">
-            &rarr;
-          </button>
+            <button
+              onClick={prevCard}
+              className="text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px]"
+            >
+              &larr;
+            </button>
+            <button
+              onClick={nextCard}
+              className="text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px]"
+            >
+              &rarr;
+            </button>
           </div>
-         
         </div>
         <CardSlider
           cards={cards}
