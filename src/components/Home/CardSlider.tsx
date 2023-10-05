@@ -1,13 +1,11 @@
 "use client";
-// components/CardSlider.tsx
+
 import { useState } from "react";
 import Card from "@/components/Shared/Card";
 
 interface CardProps {
-  // Define your card properties here
   title: string;
   description: string;
-  // Add more properties as needed
 }
 
 interface CardSliderProps {

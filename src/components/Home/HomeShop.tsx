@@ -5,7 +5,6 @@ const cards = [
   { title: "Card 2", description: "Description 2" },
   { title: "Card 3", description: "Description 3" },
   { title: "Card 4", description: "Description 4" },
-  // Add more cards as needed
 ];
 
 const HomeShop = () => {

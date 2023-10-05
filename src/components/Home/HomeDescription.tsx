@@ -15,4 +15,5 @@ const HomeDescription = ({ title, description }: IHomeDesc) => {
     </>
   );
 };
+
 export default HomeDescription;
