@@ -10,17 +10,6 @@ const cards = [
   { title: "Card 4", description: "Description 4" },
 ];
 
-const HomeShop = () => {
-  return (
-    <>
-      <div className="w-full bg-white flex items-center justify-center p-[50px]">
-        <CardSlider cards={cards} />
-      </div>
-    </>
-  );
-};
-export default HomeShop;
-
 interface CardProps {
   title: string;
   description: string;
@@ -28,9 +17,29 @@ interface CardProps {
 
 interface CardSliderProps {
   cards: CardProps[];
+  visibleIndices: number[];
+  onPrevCard: () => void;
+  onNextCard: () => void;
 }
 
-const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
+const CardSlider: React.FC<CardSliderProps> = ({
+  cards,
+  visibleIndices,
+  onPrevCard,
+  onNextCard,
+}) => {
+  return (
+    <div className="flex items-center justify-center">
+      <div className="flex space-x-4">
+        {visibleIndices.map((index) => (
+          <Card key={index} {...cards[index]} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const HomeShop = () => {
   const [visibleIndices, setVisibleIndices] = useState([0, 1, 2, 3]);
 
   const nextCard = () => {
@@ -46,18 +55,31 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <button onClick={prevCard} className="text-2xl mr-4">
-        &larr;
-      </button>
-      <div className="flex space-x-4">
-        {visibleIndices.map((index) => (
-          <Card key={index} {...cards[index]} />
-        ))}
+    <>
+      <div className="w-full bg-beige flex items-center justify-center p-[100px] flex-col">
+        <div className="flex flex-row justify-between w-full items-center">
+          <div className="text-[60px] font-bold text-black">
+            EXPLORE THE COLLECTION
+          </div>
+          <div className="flex flex-row gap-[10px]">
+          <button onClick={prevCard} className="text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px]">
+            &larr;
+          </button>
+          <button onClick={nextCard} className="text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px]">
+            &rarr;
+          </button>
+          </div>
+         
+        </div>
+        <CardSlider
+          cards={cards}
+          visibleIndices={visibleIndices}
+          onPrevCard={prevCard}
+          onNextCard={nextCard}
+        />
       </div>
-      <button onClick={nextCard} className="text-2xl ml-4">
-        &rarr;
-      </button>
-    </div>
+    </>
   );
 };
+
+export default HomeShop;
