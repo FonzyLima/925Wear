@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Nav from "@/components/Shared/Nav";
-import 'react-responsive-carousel/lib/styles/carousel.min.css' 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Footer from "@/components/Shared/Footer";
 
 export const metadata: Metadata = {
   title: "925Wear",
@@ -18,6 +19,8 @@ export default function RootLayout({
       <body>
         <Nav />
         {children}
+        <div className="mb-[350px] -z-30 w-full"></div>
+        <Footer />
       </body>
     </html>
   );
