@@ -11,11 +11,11 @@ interface ButtonProps {
 
 const Button = ({ classN, text, textClass, link }: ButtonProps) => {
   return (
-    <button className={`py-[17px] px-[32px] ${classN} rounded-full`}>
-      <Link href={link}>
+    <Link href={link}>
+      <button className={`py-[17px] px-[32px] ${classN} rounded-full`}>
         <div className={`${textClass}`}>{text}</div>
-      </Link>
-    </button>
+      </button>
+    </Link>
   );
 };
 
