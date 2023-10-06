@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Story = () => {
   return (
-    <div className="w-full px-[60px] py-[40px]">
+    <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
       <div className="flex flex-col space-y-10 px-[60px] py-[55px] border-solid border rounded-[30px]">
         <div className="text-[60px] font-primary">Our Story</div>
         <div className="flex flex-row justify-between mt-[30px]">
