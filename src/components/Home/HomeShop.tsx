@@ -111,7 +111,7 @@ const HomeShop = () => {
           <Button
             text="Shop Now"
             classN="bg-yellowgreen"
-            textClass="text-[22px] font-primary font-bold"
+            textClass="text-[22px] font-primary font-semibold"
             link="/store"
           />
         </div>

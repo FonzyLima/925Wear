@@ -12,7 +12,7 @@ interface ButtonProps {
 const Button = ({ classN, text, textClass, link }: ButtonProps) => {
   return (
     <Link href={link}>
-      <button className={`py-[17px] px-[32px] ${classN} rounded-full`}>
+      <button className={`py-2 px-6 ${classN} rounded-full`}>
         <div className={`${textClass}`}>{text}</div>
       </button>
     </Link>

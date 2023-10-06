@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import sample from "@/assets/sample.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Button from "../Shared/Button";
 
 const Header = () => {
   return (
@@ -61,13 +62,24 @@ const Header = () => {
             buttonUrl="/store"
           />
           <HomepageCarouselItem
-            title="SHOP NEW COLLECTION"
+            title=""
             desktopImageSrc={sample}
             mobileImageSrc={sample}
-            buttonText="See more"
-            buttonUrl="/store"
+            buttonText=""
+            buttonUrl=""
           />
         </Carousel>
+        <div className="absolute top-0 flex flex-col justify-center items-start z-10 h-full mx-[60px]">
+          <div className="z-10 font-black text-white text-[60px] text-left">
+            SHOP NEW COLLECTION
+          </div>
+          <Button
+            text="See more"
+            classN="border text-white text-[22px] rounded-full font-semibold"
+            textClass=""
+            link="/store"
+          />
+        </div>
       </div>
     </>
   );
@@ -92,8 +104,10 @@ function HomepageCarouselItem({
 }: IHomepageCarousel) {
   return (
     <div className="flex flex-col border min-h-[500px] items-start h-full justify-center align-middle text-center overflow-hidden">
-      <div className="flex flex-col justify-center items-start z-10 h-full px-[60px]">
-        <div className="z-10 font-black text-white text-[60px] text-left">{title}</div>
+      {/* <div className="flex flex-col justify-center items-start z-10 h-full px-[60px]">
+        <div className="z-10 font-black text-white text-[60px] text-left">
+          {title}
+        </div>
         {!!buttonText && !!buttonUrl && (
           <a
             href={buttonUrl}
@@ -103,8 +117,14 @@ function HomepageCarouselItem({
           >
             {buttonText}
           </a>
+          <Button
+            text={buttonText}
+            classN="border text-white text-[22px] rounded-full font-semibold"
+            textClass=""
+            link={buttonUrl}
+          />
         )}
-      </div>
+      </div> */}
       <Image
         src={desktopImageSrc}
         alt="925"
