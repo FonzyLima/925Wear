@@ -63,57 +63,62 @@ const HomeShop = () => {
 
   return (
     <>
-      <div className="w-full bg-beige flex items-center justify-center px-[100px] py-[55px] gap-[40px] flex-col">
-        <div className="flex flex-row justify-between w-full items-center">
-          <div className="text-[60px] font-bold text-black">
-            EXPLORE THE COLLECTION
-          </div>
-          <div className="flex flex-row gap-[10px]">
-            <button
-              onClick={slideRight}
-              className={`btn text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px] ${
-                currentPosition === 0 ? "inactive" : ""
-              }`}
-            >
-              &larr;
-            </button>
-            <button
-              onClick={slideLeft}
-              className={`text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px] btn ${
-                currentPosition === slidesCount ? "inactive" : ""
-              }`}
-            >
-              &rarr;
-            </button>
-          </div>
-        </div>
-        <div className="container">
-          <div className="slider-container">
-            <div className="slider" style={{ marginLeft: `${currentMargin}%` }}>
-              {Array.from({ length: slides }, (_, index) => (
-                <>
-                  {/* <div key={index} className="slide">
-                  <span>{index + 1}</span>
-                   </div> */}
-                  <div key={index} className="slide">
-                    <Card
-                      image={sample}
-                      price="P 1,400"
-                      title={`Knot Skirt ${index}`}
-                    />
-                  </div>
-                </>
-              ))}
+      <div className="bg-beige w-full flex flex-col items-center justify-center">
+        <div className="w-full bg-beige flex items-center justify-center px-[100px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
+          <div className="flex flex-row justify-between w-full items-center">
+            <div className="text-[60px] font-bold text-black">
+              EXPLORE THE COLLECTION
+            </div>
+            <div className="flex flex-row gap-[10px]">
+              <button
+                onClick={slideRight}
+                className={`btn text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px] ${
+                  currentPosition === 0 ? "inactive" : ""
+                }`}
+              >
+                &larr;
+              </button>
+              <button
+                onClick={slideLeft}
+                className={`text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px] btn ${
+                  currentPosition === slidesCount ? "inactive" : ""
+                }`}
+              >
+                &rarr;
+              </button>
             </div>
           </div>
-        </div>
-        <div className="w-full flex items-center justify-center">
-          <Button
-            text="Shop Now"
-            classN="bg-yellowgreen"
-            textClass="text-[22px] font-primary font-semibold"
-            link="/store"
-          />
+          <div className="container">
+            <div className="slider-container">
+              <div
+                className="slider"
+                style={{ marginLeft: `${currentMargin}%` }}
+              >
+                {Array.from({ length: slides }, (_, index) => (
+                  <>
+                    {/* <div key={index} className="slide">
+                  <span>{index + 1}</span>
+                   </div> */}
+                    <div key={index} className="slide">
+                      <Card
+                        image={sample}
+                        price="P 1,400"
+                        title={`Knot Skirt ${index}`}
+                      />
+                    </div>
+                  </>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <Button
+              text="Shop Now"
+              classN="bg-yellowgreen"
+              textClass="text-[22px] font-primary font-semibold"
+              link="/store"
+            />
+          </div>
         </div>
       </div>
     </>
