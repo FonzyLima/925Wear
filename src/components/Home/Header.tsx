@@ -9,7 +9,7 @@ import Button from "../Shared/Button";
 const Header = () => {
   return (
     <>
-      <div className="w-full pt-[95px] px-[40px] bg-white font-primary">
+      <div className="relative w-full pt-[95px] px-[40px] bg-white font-primary">
         <Carousel
           className="w-full flex justify-center relative overflow-hidden h-full rounded-[30px]"
           autoPlay={true}
@@ -69,7 +69,7 @@ const Header = () => {
             buttonUrl=""
           />
         </Carousel>
-        <div className="absolute top-0 flex flex-col justify-center items-start z-10 h-full mx-[60px]">
+        <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[60px]">
           <div className="z-10 font-black text-white text-[60px] text-left">
             SHOP NEW COLLECTION
           </div>
