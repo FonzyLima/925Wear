@@ -5,7 +5,7 @@ import Image from "next/image";
 const HomeStory = () => {
   return (
     <>
-      <div className="w-full bg-black flex items-center justify-center p-[40px] mb-[350px] rounded-br-[50px] rounded-bl-[50px]">
+      <div className="w-full bg-black flex items-center justify-center p-[40px] rounded-br-[50px] rounded-bl-[50px]">
         <div className="border-white border-[1px] w-full px-[60px] py-[55px] rounded-[30px] flex flex-col gap-[40px]">
           <div className="text-white font-bold text-[60px]">OUR STORY</div>
           <div className="flex flex-col gap-[40px] justify-center items-center">
