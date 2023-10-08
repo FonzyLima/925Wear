@@ -73,12 +73,7 @@ const Header = () => {
           <div className="z-10 font-black text-white text-[60px] text-left">
             SHOP NEW COLLECTION
           </div>
-          <Button
-            text="See more"
-            classN="border text-white text-[22px] rounded-full font-semibold"
-            textClass=""
-            link="/store"
-          />
+          <Button text="See more" variant="outline" link="/store" />
         </div>
       </div>
     </>

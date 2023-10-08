@@ -37,12 +37,7 @@ const HomeStory = () => {
               Hard work is inevitable. The brand champions those who have found
               the perfect balance of passion and practicality.
             </div>
-            <Button
-              text="Learn more"
-              classN="border-[0.5px] text-white text-[22px] rounded-full font-semibold"
-              textClass=""
-              link="/about"
-            />
+            <Button text="Learn more" variant="outline" link="/about" />
           </div>
         </div>
       </div>
