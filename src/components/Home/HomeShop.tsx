@@ -112,12 +112,7 @@ const HomeShop = () => {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <Button
-              text="Shop Now"
-              classN="bg-yellowgreen"
-              textClass="text-[22px] font-primary font-semibold"
-              link="/store"
-            />
+            <Button text="Shop Now" variant="yellowgreen" link="/store" />
           </div>
         </div>
       </div>
