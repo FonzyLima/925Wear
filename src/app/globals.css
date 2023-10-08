@@ -55,3 +55,7 @@
     width: calc(10% - 20px);
   }
 }
+
+.hidden-nav {
+  transform: translateY(-100%);
+}
