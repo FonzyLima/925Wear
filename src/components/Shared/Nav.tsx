@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import LinkComp from "./LinkComp";
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -42,13 +43,13 @@ const Nav = () => {
         </div>
         <ul className="gap-[20px] text-[16px] flex-row flex font-primary font-medium">
           <li>
-            <Link href="/">Home</Link>
+            <LinkComp link="/" text="Home" />
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <LinkComp link="/about" text="About" />
           </li>
           <li>
-            <Link href="/store">Store</Link>
+            <LinkComp link="/store" text="Store" />
           </li>
         </ul>
       </div>
