@@ -17,10 +17,13 @@ const Button = ({
 }: ButtonProps) => {
   const type = {
     variant: {
-      yellowgreen: "bg-yellowgreen text-[22px] font-primary font-semibold",
-      outline: "border text-white text-[22px] rounded-full font-semibold",
+      yellowgreen:
+        "bg-yellowgreen text-[22px] border-[1px] border-black font-primary font-semibold duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black",
+      outline:
+        "border text-white text-[22px] rounded-full font-semibold duration-300 hover:bg-white hover:text-black",
     },
   };
+  
   return (
     <Link href={link}>
       <button

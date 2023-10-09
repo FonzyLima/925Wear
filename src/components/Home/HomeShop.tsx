@@ -72,7 +72,7 @@ const HomeShop = () => {
             <div className="flex flex-row gap-[10px]">
               <button
                 onClick={slideRight}
-                className={`btn text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px] ${
+                className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black ${
                   currentPosition === 0 ? "inactive" : ""
                 }`}
               >
@@ -80,7 +80,7 @@ const HomeShop = () => {
               </button>
               <button
                 onClick={slideLeft}
-                className={`text-[40px] bg-yellowgreen rounded-full w-[78px] h-[78px] btn ${
+                className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black ${
                   currentPosition === slidesCount ? "inactive" : ""
                 }`}
               >
