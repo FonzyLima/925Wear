@@ -15,12 +15,6 @@ const getProduct = async () => {
 export default async function Shop() {
   const products = await getProduct();
   console.log(typeof products.items)
-  // Number of items per row
-  // const itemsPerRow = 3;
-
-  // // Calculate the number of rows
-  // const numRows = Math.ceil(products.items.length / itemsPerRow);
-
   
   return (
     <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]" > 
@@ -28,7 +22,7 @@ export default async function Shop() {
         SHOP OUR NEW <br/>COLLECTION OUT NOW.
       </div>
       <div className="px-[100px] mt-[46px] flex flex-col gap-[20px]">
-      {Array.from({length:3},(v,rowIndex)=>(
+      {Array.from({length:5},(v,rowIndex)=>(
         <div key={rowIndex} className="flex flex-row gap-[20px] ">
           {products.items.slice(rowIndex*3,(rowIndex+1)*3).map((product,i)=>(
             <div key={i} className="w-1/3">
