@@ -32,7 +32,7 @@ const HomeStory = () => {
             </div>
             <div className="w-full text-justify text-[20px] text-white font-primary">
               925 was founded on the idea of doing work you love, or rather, the
-              fear of not pursuing it. It isn't a knock on work culture or the
+              fear of not pursuing it. It isn&apos;t a knock on work culture or the
               day-to-day grind, in fact, it embraces it through its designs.
               Hard work is inevitable. The brand champions those who have found
               the perfect balance of passion and practicality.
