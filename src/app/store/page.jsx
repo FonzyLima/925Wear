@@ -50,7 +50,7 @@ export default function Shop() {
         SHOP OUR NEW <br/>COLLECTION OUT NOW. 
       </div>
       <div className="w-full mt-[46px] flex flex-col gap-[20px]">
-        <div className="w-full flex flex-row justify-between">
+        <div className="w-full flex flex-row justify-between gap-[20px]">
         {products == null ? null : products.items.slice(page*3,(page+1)*3).map((product,i)=>(
           <div key={product.fields.name} className="">
             {products.includes.Asset.map((a) => (
@@ -67,7 +67,7 @@ export default function Shop() {
             </div>
         ))}
         </div>
-        <div className=" flex flex-row justify-between">
+        <div className="w-full flex flex-row justify-between gap-[20px]">
         {products == null ? null : products.items.slice((page+1)*3,(page+2)*3).map((product,i)=>(
           <div key={product.fields.name} className="">
            
