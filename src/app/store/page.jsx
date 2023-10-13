@@ -1,5 +1,7 @@
+'use client'
 import Card from "@/components/Shared/Card";
 import sample from "@/assets/sample.png";
+import { useState, useEffect } from "react";
 const getProduct = async () => {
   const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?access_token=${process.env.CONTENTFUL_ACCESS_KEY}&content_type=product`
   ,
@@ -12,32 +14,88 @@ const getProduct = async () => {
 
   return res.json()
 }
-export default async function Shop() {
-  const products = await getProduct();
-  console.log(products.items)
-  
+
+export default function Shop() {
+
+  const [products, setProducts] = useState(null);
+  const [page,setPage] = useState(0)
+  const fetchProducts = async () => {
+    try {
+      const productsData = await getProduct();
+      setProducts(productsData);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      // Handle the error, e.g., set an error state
+    }
+  };
+  useEffect(() => {
+    fetchProducts();
+    console.log(page)
+  }, [page]); 
+  const nextPage = () =>{
+    if(page<4){
+      setPage(page+2)
+    }
+  }
+  const backPage = () =>{
+    if(page>0){
+      setPage(page-2)
+    }
+  }
   return (
     <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]" > 
       <div className="w-full flex justify-end text-[60px] font-primary pr-[200px]">
-        SHOP OUR NEW <br/>COLLECTION OUT NOW.
+        SHOP OUR NEW <br/>COLLECTION OUT NOW. 
       </div>
       <div className="px-[100px] mt-[46px] flex flex-col gap-[20px]">
-      {Array.from({length:10},(v,rowIndex)=>(
+        <div className="flex flex-row gap-[20px]">
+        {products == null ? null : products.items.slice(page*3,(page+1)*3).map((product,i)=>(
+          <div key={product.fields.name} className="w-1/3">
+            <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={sample}/>
+            </div>
+        ))}
+        </div>
+        <div className="flex flex-row gap-[20px]">
+        {products == null ? null : products.items.slice((page+1)*3,(page+2)*3).map((product,i)=>(
+          <div key={product.fields.name} className="w-1/3">
+            <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={sample}/>
+            </div>
+        ))}
+        </div>
+        
+      </div>
+      {/* <div className="px-[100px] mt-[46px] flex flex-col gap-[20px]">
+      {products == null ? null : Array.from({length:2},(v,rowIndex)=>(
         <div key={rowIndex} className="flex flex-row gap-[20px] ">
+          
           {products.items.slice(rowIndex*3,(rowIndex+1)*3).map((product,i)=>(
             <div key={i} className="w-1/3">
+              
             <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={sample}/>
             </div>
           ))}
         </div>
-      ))}
+      ))} */}
       {/* {products.items.map((product,i) => (
         <div key={i} className="w-[450px]">
         <Card  title={product.fields.name} price={product.fields.price} image={sample}/>
         </div>
       ))} */}
-      </div>
-      
+      {/* </div> */}
+      <div className="flex flex-row gap-[10px] justify-end pr-[100px] mt-[46px]">
+              <button
+                onClick={backPage}
+                className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black`}
+              >
+                &larr;
+              </button>
+              <button
+                onClick={nextPage}
+                className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black`}
+              >
+                &rarr;
+              </button>
+            </div>
       
 
     </div>
