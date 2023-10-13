@@ -1,6 +1,6 @@
 'use client'
 import Card from "@/components/Shared/Card";
-import sample from "@/assets/sample.png";
+
 import { useState, useEffect } from "react";
 const getProduct = async () => {
   const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?access_token=${process.env.CONTENTFUL_ACCESS_KEY}&content_type=product`

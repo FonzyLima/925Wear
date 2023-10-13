@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Card from "@/components/Shared/Card";
-import sample from "@/assets/sample.png";
+
 import Button from "../Shared/Button";
 
 

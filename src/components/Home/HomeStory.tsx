@@ -1,5 +1,5 @@
 import Button from "../Shared/Button";
-import sample from "@/assets/sample.png";
+import sample from "@/assets/car1.png";
 import Image from "next/image";
 
 const HomeStory = () => {

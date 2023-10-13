@@ -1,7 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import sample from "@/assets/sample.png";
+
+import car1 from "@/assets/car1.png"
+import car2 from "@/assets/car2.png"
+import car3 from "@/assets/car3.png"
+import car4 from "@/assets/car4.png"
+import car5 from "@/assets/car5.png"
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Button from "../Shared/Button";
@@ -56,17 +61,38 @@ const Header = () => {
         >
           <HomepageCarouselItem
             title="SHOP NEW COLLECTION"
-            desktopImageSrc={sample}
-            mobileImageSrc={sample}
+            desktopImageSrc={car1}
+            mobileImageSrc={car1}
             buttonText="See more"
             buttonUrl="/store"
           />
           <HomepageCarouselItem
             title=""
-            desktopImageSrc={sample}
-            mobileImageSrc={sample}
+            desktopImageSrc={car2}
+            mobileImageSrc={car2}
             buttonText=""
             buttonUrl=""
+          />
+          <HomepageCarouselItem
+            title="SHOP NEW COLLECTION"
+            desktopImageSrc={car3}
+            mobileImageSrc={car3}
+            buttonText="See more"
+            buttonUrl="/store"
+          />
+          <HomepageCarouselItem
+            title="SHOP NEW COLLECTION"
+            desktopImageSrc={car4}
+            mobileImageSrc={car4}
+            buttonText="See more"
+            buttonUrl="/store"
+          />
+          <HomepageCarouselItem
+            title="SHOP NEW COLLECTION"
+            desktopImageSrc={car5}
+            mobileImageSrc={car5}
+            buttonText="See more"
+            buttonUrl="/store"
           />
         </Carousel>
         <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[60px]">
