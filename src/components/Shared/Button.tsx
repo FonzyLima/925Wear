@@ -7,6 +7,7 @@ interface ButtonProps {
   classN?: string;
   text: string;
   link: HTMLLinkElement | string;
+  target?: "_blank" | "_self"
 }
 
 const Button = ({
@@ -14,6 +15,7 @@ const Button = ({
   text,
   link,
   variant = "yellowgreen",
+  target = "_self"
 }: ButtonProps) => {
   const type = {
     variant: {
@@ -25,7 +27,7 @@ const Button = ({
   };
   
   return (
-    <Link href={link}>
+    <Link href={link} target={target}>
       <button
         className={`py-2 px-6 ${classN} ${type.variant[variant]} rounded-full`}
       >

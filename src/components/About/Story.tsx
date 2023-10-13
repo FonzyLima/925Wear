@@ -1,39 +1,45 @@
 import Image from "next/image";
 import Button from "../Shared/Button";
+import ab1 from "@/assets/ab1.jpg"
+import ab2 from "@/assets/ab2.jpg"
+import ab3 from "@/assets/ab3.jpg"
+import abstudio from "@/assets/abstudio.png"
+import abwear from "@/assets/abwear.png"
 const Story = () => {
   return (
     <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
       <div className="flex flex-col space-y-10 px-[60px] py-[55px] border-solid border rounded-[30px]">
-        <div className="text-[60px] font-primary">Our Story</div>
-        <div className="flex flex-row justify-between mt-[30px] gap-[30px]">
-          <div className="">
-            <Image
-              className="rounded-[300px]"
-              src="/about-circl.jpg"
-              height={400}
-              width={425}
-              alt="circle"
-            />
-          </div>
-          <div>
-            <Image
-              className="rounded-[230px]"
-              src="/about-circl.jpg"
-              height={400}
-              width={425}
-              alt="circle"
-            />
-          </div>
-          <div className="">
-            <Image
-              className="rounded-full"
-              src="/about-circl.jpg"
-              height={400}
-              width={425}
-              alt="circle"
-            />
-          </div>
-        </div>
+        <div className="text-[60px] font-bold">ABOUT THE BRAND</div>
+        <div className="flex flex-row gap-[30px] w-full">
+              <div className="rounded-full w-1/3 h-[380px] overflow-hidden">
+              <Image
+                  src={ab1}
+                  alt="storyimg"
+                  // objectFit="cover"
+                  // layout="fill"
+                  className=" object-cover h-full"
+                />
+              </div>
+              <div className="rounded-full w-1/3 h-[380px] overflow-hidden">
+                <Image
+                  src={ab2}
+                  alt="storyimg"
+                  // objectFit="cover"
+                  // layout="fill"
+                  className=" object-cover h-full"
+                />
+              </div>
+              <div className="rounded-full w-1/3 h-[380px] overflow-hidden">
+                <Image
+                  src={ab3}
+                  alt="storyimg"
+                  // objectFit="cover"
+                  // layout="fill"
+                  className=" object-cover h-full"
+                />
+              </div>
+            </div>
+       
         <div className="text-[30px] text-justify font-primary">
           925 was founded on the idea of doing work you love, or rather, the
           fear of not pursuing it. It isn’t a knock on work culture or the
@@ -55,9 +61,8 @@ const Story = () => {
           <div className="w-2/5">
             <Image
               className="rounded-[50px]"
-              src="/about-circl.jpg"
-              height={374}
-              width={613}
+              src={abstudio}
+             
               alt="circle"
             />
           </div>
@@ -66,9 +71,8 @@ const Story = () => {
           <div className="w-2/5">
             <Image
               className="rounded-[50px]"
-              src="/about-circl.jpg"
-              height={374}
-              width={613}
+              src={abwear}
+              
               alt="circle"
             />
           </div>

@@ -60,7 +60,7 @@ const Header = () => {
           }
         >
           <HomepageCarouselItem
-            title="SHOP NEW COLLECTION"
+            title="SHOP NEW COLLECTION 02"
             desktopImageSrc={car1}
             mobileImageSrc={car1}
             buttonText="See more"
@@ -74,21 +74,21 @@ const Header = () => {
             buttonUrl=""
           />
           <HomepageCarouselItem
-            title="SHOP NEW COLLECTION"
+            title=""
             desktopImageSrc={car3}
             mobileImageSrc={car3}
             buttonText="See more"
             buttonUrl="/store"
           />
           <HomepageCarouselItem
-            title="SHOP NEW COLLECTION"
+            title=""
             desktopImageSrc={car4}
             mobileImageSrc={car4}
             buttonText="See more"
             buttonUrl="/store"
           />
           <HomepageCarouselItem
-            title="SHOP NEW COLLECTION"
+            title=""
             desktopImageSrc={car5}
             mobileImageSrc={car5}
             buttonText="See more"
@@ -97,7 +97,7 @@ const Header = () => {
         </Carousel>
         <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[60px]">
           <div className="z-10 font-black text-white text-[60px] text-left">
-            SHOP NEW COLLECTION
+            SHOP COLLECTION 02
           </div>
           <Button text="See more" variant="outline" link="/store" />
         </div>

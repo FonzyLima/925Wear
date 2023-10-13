@@ -61,12 +61,12 @@ const HomeShop = ({products}) => {
     }
   };
 
-  const slides = 13; // Update with the actual number of slides
+  const slides = 14; // Update with the actual number of slides
 
   return (
     <>
       <div className="bg-beige w-full flex flex-col items-center justify-center">
-        <div className="w-full bg-beige flex items-center justify-center px-[100px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
+        <div className="w-full bg-beige flex items-center justify-center px-[40px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
           <div className="flex flex-row justify-between w-full items-center">
             <div className="text-[60px] font-bold text-black">
               EXPLORE THE COLLECTION 
