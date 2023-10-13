@@ -12,8 +12,8 @@ const HomeStory = () => {
         <div className="border-white border-[1px] w-full px-[60px] py-[55px] rounded-[30px] flex flex-col gap-[40px]">
           <div className="text-white font-bold text-[60px]">ABOUT THE BRAND</div>
           <div className="flex flex-col gap-[40px] justify-center items-center">
-            <div className="flex flex-row gap-[30px] w-full">
-              <div className="rounded-full w-1/3 h-[380px] overflow-hidden">
+            <div className="flex flex-col sm:flex-row gap-[30px] w-full">
+              <div className="rounded-full sm:w-1/3 h-[380px] overflow-hidden">
               <Image
                   src={ab1}
                   alt="storyimg"
@@ -22,7 +22,7 @@ const HomeStory = () => {
                   className=" object-cover h-full"
                 />
               </div>
-              <div className="rounded-full w-1/3 h-[380px] overflow-hidden">
+              <div className="rounded-full sm:w-1/3 h-[380px] overflow-hidden">
                 <Image
                   src={ab2}
                   alt="storyimg"
@@ -31,7 +31,7 @@ const HomeStory = () => {
                   className=" object-cover h-full"
                 />
               </div>
-              <div className="rounded-full w-1/3 h-[380px] overflow-hidden">
+              <div className="rounded-full sm:w-1/3 h-[380px] overflow-hidden">
                 <Image
                   src={ab3}
                   alt="storyimg"

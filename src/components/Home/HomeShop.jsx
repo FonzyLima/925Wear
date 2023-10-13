@@ -67,8 +67,8 @@ const HomeShop = ({products}) => {
     <>
       <div className="bg-beige w-full flex flex-col items-center justify-center">
         <div className="w-full bg-beige flex items-center justify-center px-[40px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
-          <div className="flex flex-row justify-between w-full items-center">
-            <div className="text-[60px] font-bold text-black">
+          <div className="flex flex-col sm:flex-row justify-between w-full items-center">
+            <div className="text-[52px] sm:text-[60px] font-bold text-black">
               EXPLORE THE COLLECTION 
             </div>
             <div className="flex flex-row gap-[10px]">
