@@ -26,7 +26,7 @@ export default async function Home() {
         title="02: STONE FISH"
         description="The newest collection honors Lobo, Batangas, the hometown of our grandparents and a second home to our family. Known for being a fishing town with scenic stone beaches and mountain ranges, 02: STONE FISH features outdoor and fishing-inspired wear to be worn in and out of the city."
       />
-      <HomeShop products={products.items}/>
+      <HomeShop products={products}/>
       <HomeStory />
     </div>
   );

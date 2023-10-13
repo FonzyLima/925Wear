@@ -61,7 +61,7 @@ const HomeShop = ({products}) => {
     }
   };
 
-  const slides = 18; // Update with the actual number of slides
+  const slides = 13; // Update with the actual number of slides
 
   return (
     <>
@@ -96,14 +96,20 @@ const HomeShop = ({products}) => {
                 className="slider"
                 style={{ marginLeft: `${currentMargin}%` }}
               >
-                {products.map((product,i)=>(
+                {products.items.map((product,i)=>(
                   <>
                   <div key={i} className="slide">
-                    <Card
-                        image={sample}
-                        price={product.fields.price}
-                        title={product.fields.name}
-                      />
+                  {products.includes.Asset.map((a) => (
+                <div key={a.sys.id}>
+                  {product.fields.image.sys.id == a.sys.id ? (
+                    <Card  title={product.fields.name} price={`PHP ${product.fields.price}`} image={"https:" + a.fields.file.url}/>
+                    
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+              ))}
+                    
                     </div>
                   </>
                   

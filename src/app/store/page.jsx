@@ -56,7 +56,7 @@ export default function Shop() {
             {products.includes.Asset.map((a) => (
                 <div key={a.sys.id}>
                   {product.fields.image.sys.id == a.sys.id ? (
-                    <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={"https:" + a.fields.file.url}/>
+                    <Card  title={product.fields.name} price={`PHP ${product.fields.price}`} image={"https:" + a.fields.file.url}/>
                     
                   ) : (
                     <div></div>
@@ -71,7 +71,16 @@ export default function Shop() {
         {products == null ? null : products.items.slice((page+1)*3,(page+2)*3).map((product,i)=>(
           <div key={product.fields.name} className="">
            
-            <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={sample}/>
+           {products.includes.Asset.map((a) => (
+                <div key={a.sys.id}>
+                  {product.fields.image.sys.id == a.sys.id ? (
+                    <Card  title={product.fields.name} price={`PHP ${product.fields.price}`} image={"https:" + a.fields.file.url}/>
+                    
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+              ))}
             </div>
         ))}
         </div>
