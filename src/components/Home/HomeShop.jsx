@@ -5,7 +5,9 @@ import Card from "@/components/Shared/Card";
 import sample from "@/assets/sample.png";
 import Button from "../Shared/Button";
 
-const HomeShop = () => {
+
+const HomeShop = ({products}) => {
+
   const [currentPosition, setCurrentPosition] = useState(0);
   const [currentMargin, setCurrentMargin] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(0);
@@ -26,7 +28,7 @@ const HomeShop = () => {
     };
   }, []);
 
-  const setParams = (w: number) => {
+  const setParams = (w) => {
     let newSlidesPerPage = 1;
     if (w >= 551 && w < 901) newSlidesPerPage = 2;
     else if (w >= 901 && w < 1101) newSlidesPerPage = 3;
@@ -59,7 +61,7 @@ const HomeShop = () => {
     }
   };
 
-  const slides = 10; // Update with the actual number of slides
+  const slides = 18; // Update with the actual number of slides
 
   return (
     <>
@@ -67,7 +69,7 @@ const HomeShop = () => {
         <div className="w-full bg-beige flex items-center justify-center px-[100px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
           <div className="flex flex-row justify-between w-full items-center">
             <div className="text-[60px] font-bold text-black">
-              EXPLORE THE COLLECTION
+              EXPLORE THE COLLECTION 
             </div>
             <div className="flex flex-row gap-[10px]">
               <button
@@ -94,20 +96,19 @@ const HomeShop = () => {
                 className="slider"
                 style={{ marginLeft: `${currentMargin}%` }}
               >
-                {Array.from({ length: slides }, (_, index) => (
+                {products.map((product,i)=>(
                   <>
-                    {/* <div key={index} className="slide">
-                  <span>{index + 1}</span>
-                   </div> */}
-                    <div key={index} className="slide">
-                      <Card
+                  <div key={i} className="slide">
+                    <Card
                         image={sample}
-                        price="P 1,400"
-                        title={`Knot Skirt ${index}`}
+                        price={product.fields.price}
+                        title={product.fields.name}
                       />
                     </div>
                   </>
+                  
                 ))}
+                
               </div>
             </div>
           </div>

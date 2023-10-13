@@ -8,10 +8,10 @@ const Story = () => {
         <div className="flex flex-row justify-between mt-[30px]">
           <div className="">
             <Image
-              className="rounded-[230px]"
+              className="rounded-[300px]"
               src="/about-circl.jpg"
               height={400}
-              width={400}
+              width={425}
               alt="circle"
             />
           </div>
@@ -20,7 +20,7 @@ const Story = () => {
               className="rounded-[230px]"
               src="/about-circl.jpg"
               height={400}
-              width={400}
+              width={425}
               alt="circle"
             />
           </div>
@@ -29,7 +29,7 @@ const Story = () => {
               className="rounded-full"
               src="/about-circl.jpg"
               height={400}
-              width={400}
+              width={425}
               alt="circle"
             />
           </div>
