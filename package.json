@@ -1,5 +1,5 @@
 {
-  "name": "rafweb",
+  "name": "925wear",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.0.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-responsive-carousel": "^3.2.23",
-    "swiper": "^8.4.5"
+    "@contentful/rich-text-react-renderer": "^15.18.0",
+    "@contentful/rich-text-types": "^16.3.0",
+    "contentful": "^10.6.1",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
-    "eslint": "8.29.0",
-    "eslint-config-next": "13.0.6"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
