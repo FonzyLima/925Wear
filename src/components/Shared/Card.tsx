@@ -13,12 +13,15 @@ const Card = ({ title, price, image, link = "" }: CardProps) => {
   return (
     <Link href={link} className="group">
       <div className="w-full flex flex-col font-primary ">
-        <div className="w-full h-[250px]">
+        <div className="w-full h-[450px]">
           <Image
             src={image}
             alt="item"
             // objectFit="cover"
             // layout="fill"
+            width={411}
+            height={600}
+         
             className="rounded-[30px] object-cover h-full group-hover:rounded-[70px] duration-300"
           />
         </div>

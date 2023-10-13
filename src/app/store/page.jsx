@@ -23,15 +23,17 @@ export default function Shop() {
     try {
       const productsData = await getProduct();
       setProducts(productsData);
+      
     } catch (error) {
       console.error('Error fetching products:', error);
       // Handle the error, e.g., set an error state
     }
   };
+
   useEffect(() => {
     fetchProducts();
-    console.log(page)
-  }, [page]); 
+    console.log(products)
+  }, [products]); 
   const nextPage = () =>{
     if(page<4){
       setPage(page+2)
@@ -43,21 +45,32 @@ export default function Shop() {
     }
   }
   return (
-    <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]" > 
-      <div className="w-full flex justify-end text-[60px] font-primary pr-[200px]">
+    <div className="flex flex-col justify-between bg-white w-full px-[60px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]" > 
+      <div className="w-full flex justify-end text-[60px] font-primary">
         SHOP OUR NEW <br/>COLLECTION OUT NOW. 
       </div>
-      <div className="px-[100px] mt-[46px] flex flex-col gap-[20px]">
-        <div className="flex flex-row gap-[20px]">
+      <div className="w-full mt-[46px] flex flex-col gap-[20px]">
+        <div className="w-full flex flex-row justify-between">
         {products == null ? null : products.items.slice(page*3,(page+1)*3).map((product,i)=>(
-          <div key={product.fields.name} className="w-1/3">
-            <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={sample}/>
+          <div key={product.fields.name} className="">
+            {products.includes.Asset.map((a) => (
+                <div key={a.sys.id}>
+                  {product.fields.image.sys.id == a.sys.id ? (
+                    <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={"https:" + a.fields.file.url}/>
+                    
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+              ))}
+            
             </div>
         ))}
         </div>
-        <div className="flex flex-row gap-[20px]">
+        <div className=" flex flex-row justify-between">
         {products == null ? null : products.items.slice((page+1)*3,(page+2)*3).map((product,i)=>(
-          <div key={product.fields.name} className="w-1/3">
+          <div key={product.fields.name} className="">
+           
             <Card  title={product.fields.name} price={`P ${product.fields.price}`} image={sample}/>
             </div>
         ))}
@@ -82,7 +95,7 @@ export default function Shop() {
         </div>
       ))} */}
       {/* </div> */}
-      <div className="flex flex-row gap-[10px] justify-end pr-[100px] mt-[46px]">
+      <div className="flex flex-row gap-[10px] justify-end mt-[46px]">
               <button
                 onClick={backPage}
                 className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black`}

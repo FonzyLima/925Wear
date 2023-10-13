@@ -5,7 +5,7 @@ const Story = () => {
     <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
       <div className="flex flex-col space-y-10 px-[60px] py-[55px] border-solid border rounded-[30px]">
         <div className="text-[60px] font-primary">Our Story</div>
-        <div className="flex flex-row justify-between mt-[30px]">
+        <div className="flex flex-row justify-between mt-[30px] gap-[30px]">
           <div className="">
             <Image
               className="rounded-[300px]"
@@ -57,18 +57,18 @@ const Story = () => {
               className="rounded-[50px]"
               src="/about-circl.jpg"
               height={374}
-              width={543}
+              width={613}
               alt="circle"
             />
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-[40px]">
           <div className="w-2/5">
             <Image
               className="rounded-[50px]"
               src="/about-circl.jpg"
               height={374}
-              width={543}
+              width={613}
               alt="circle"
             />
           </div>
