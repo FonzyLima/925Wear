@@ -71,7 +71,7 @@ const HomeShop = ({products}) => {
             <div className="text-[52px] sm:text-[60px] font-bold text-black">
               EXPLORE THE COLLECTION 
             </div>
-            <div className="flex flex-row gap-[10px]">
+            <div className="hidden sm:flex flex-row gap-[10px]">
               <button
                 onClick={slideRight}
                 className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black ${
@@ -90,7 +90,7 @@ const HomeShop = ({products}) => {
               </button>
             </div>
           </div>
-          <div className="container">
+          <div className="hidden sm:flex sm:container">
             <div className="slider-container">
               <div
                 className="slider"

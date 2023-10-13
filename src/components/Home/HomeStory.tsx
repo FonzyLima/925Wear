@@ -22,7 +22,7 @@ const HomeStory = () => {
                   className=" object-cover h-full"
                 />
               </div>
-              <div className="rounded-full sm:w-1/3 h-[380px] overflow-hidden">
+              <div className="hidden sm:flex rounded-full sm:w-1/3 h-[380px] overflow-hidden">
                 <Image
                   src={ab2}
                   alt="storyimg"
@@ -31,7 +31,7 @@ const HomeStory = () => {
                   className=" object-cover h-full"
                 />
               </div>
-              <div className="rounded-full sm:w-1/3 h-[380px] overflow-hidden">
+              <div className="hidden sm:flex rounded-full sm:w-1/3 h-[380px] overflow-hidden">
                 <Image
                   src={ab3}
                   alt="storyimg"
