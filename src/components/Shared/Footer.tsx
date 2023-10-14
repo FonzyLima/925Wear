@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <nav className="-z-20 w-screen fixed top-0 bg-yellowgreen px-[40px] py-[55px] flex flex-col sm:flex-row justify-between items-end h-screen">
-        <div className=" tracking-[-52.964px] text-white font-bold text-[250px] sm:leading-[85%] max-h-[380px] font-brand">
+        <div className="hidden sm:flex tracking-[-52.964px] text-white font-bold text-[250px] sm:leading-[85%] max-h-[380px] font-brand">
           925
         </div>
         <div className="sm:hidden mb-[40px]">

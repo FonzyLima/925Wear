@@ -68,7 +68,8 @@ const Story = () => {
               classN="mt-[20px]"
               text="Learn more"
               variant="yellowgreen"
-              link="/store"
+              link="https://www.instagram.com/925.files/"
+              target="_blank"
             />
             {/* <div className="text-[30px] h-[75px] font-primary bg-yellowgreen w-[252px] flex justify-center items-center rounded-[50px] hover:cursor-pointer mt-[20px]">Learn More</div> */}
           </div>
@@ -94,9 +95,10 @@ const Story = () => {
             </div>
             <Button
               classN="mt-[20px]"
-              text="Learn more"
+              text="See more"
               variant="yellowgreen"
-              link="/store"
+              link="https://www.instagram.com/925.wear/"
+              target="_blank"
             />
           </div>
         </div>
