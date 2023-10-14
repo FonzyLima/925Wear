@@ -22,7 +22,7 @@ const Story = () => {
               className=" object-cover h-full"
             />
           </div>
-          <div className="rounded-full sm:w-1/3 h-[200px] overflow-hidden">
+          <div className="rounded-full sm:w-1/3 sm:h-[380px] overflow-hidden">
             <Image
               src={ab2}
               alt="storyimg"
