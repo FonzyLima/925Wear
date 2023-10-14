@@ -96,7 +96,7 @@ const Header = () => {
           />
         </Carousel>
         <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[60px]">
-          <div className="z-10 font-black text-white text-[32px] sm:text-[60px] text-left">
+          <div className="z-10 font-black text-white text-[20px] sm:text-[60px] text-left">
             SHOP COLLECTION 02
           </div>
           <Button text="See more" variant="outline" link="/store" />

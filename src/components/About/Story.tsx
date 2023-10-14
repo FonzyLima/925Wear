@@ -9,11 +9,11 @@ const Story = () => {
   return (
     <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
       <div className="flex flex-col space-y-10 px-[60px] py-[55px] border-solid border rounded-[30px]">
-        <div className="text-[52px] sm:text-[60px] font-bold">
+        <div className="text-[22px] sm:text-[60px] font-bold">
           ABOUT THE BRAND
         </div>
         <div className="flex flex-col sm:flex-row gap-[30px] w-full">
-          <div className="rounded-full hidden sm:flex sm:w-1/3 h-[380px] overflow-hidden">
+          <div className="rounded-full hidden sm:flex sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
             <Image
               src={ab1}
               alt="storyimg"
@@ -22,7 +22,7 @@ const Story = () => {
               className=" object-cover h-full"
             />
           </div>
-          <div className="rounded-full sm:w-1/3 h-[380px] overflow-hidden">
+          <div className="rounded-full sm:w-1/3 h-[200px] overflow-hidden">
             <Image
               src={ab2}
               alt="storyimg"
@@ -42,7 +42,7 @@ const Story = () => {
           </div>
         </div>
 
-        <div className=" text-[20px] sm:text-[30px] text-justify font-primary">
+        <div className=" text-[14px] sm:text-[30px] text-justify font-primary">
           925 was founded on the idea of doing work you love, or rather, the
           fear of not pursuing it. It isn’t a knock on work culture or the
           day-to-day grind, in fact, it embraces it through its designs. Hard
@@ -58,7 +58,7 @@ const Story = () => {
                 alt="circle"
               />
             </div>
-            <div className="pt-5 text-[20px] sm:text-[30px] text-justify font-primary">
+            <div className="pt-5 text-[14px] sm:text-[30px] text-justify font-primary">
               925 STUDIO is a Manila-based design house founded by Rafael
               Evangelista. Fueled by the desire to create, 925 was built to
               develop sub-brands whether it be clothing, videography, music, or
@@ -86,7 +86,7 @@ const Story = () => {
             <Image className="rounded-[50px]" src={abwear} alt="circle" />
           </div>
           <div className="flex flex-col sm:w-3/5">
-            <div className="text-[20px] sm:text-[30px] text-justify font-primary">
+            <div className="text-[14px] sm:text-[30px] text-justify font-primary">
               925 WEAR is a lifestyle clothing brand by Rafael and Bianca
               Evangelista. The brand takes inspiration from the seemingly
               mundane styles found in everyday work. Operating through capsule

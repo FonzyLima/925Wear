@@ -8,8 +8,8 @@ const HomeDescription = ({ title, description }: IHomeDesc) => {
     <>
       <div className="w-full bg-white flex items-center justify-center p-[50px]">
         <div className="flex flex-col gap-[15px] items-center justify-center text-center max-w-[740px]">
-          <div className="text-yellowgreen font-bold text-[60px]">{title}</div>
-          <div className="leading-[162%] text-[20px] text-black">{description}</div>
+          <div className="text-yellowgreen font-bold text-[22px] sm:text-[60px]">{title}</div>
+          <div className="leading-[162%] text-[14px] sm:text-[20px] text-black">{description}</div>
         </div>
       </div>
     </>

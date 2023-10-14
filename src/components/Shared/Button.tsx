@@ -20,16 +20,16 @@ const Button = ({
   const type = {
     variant: {
       yellowgreen:
-        "bg-yellowgreen text-[22px] border-[1px] border-black font-primary font-semibold duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black",
+        "bg-yellowgreen sm:text-[22px] text-[18px] border-[1px] border-black font-primary font-semibold duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black",
       outline:
-        "border text-white text-[22px] rounded-full font-semibold duration-300 hover:bg-white hover:text-black",
+        "border text-white sm:text-[22px] text-[18px] rounded-full font-semibold duration-300 hover:bg-white hover:text-black",
     },
   };
   
   return (
     <Link href={link} target={target}>
       <button
-        className={`py-2 px-6 ${classN} ${type.variant[variant]} rounded-full`}
+        className={`sm:py-2 sm:px-6 py-1 px-5 mt-1 sm:mt-0 ${classN} ${type.variant[variant]} rounded-full`}
       >
         <div className="">{text}</div>
       </button>
