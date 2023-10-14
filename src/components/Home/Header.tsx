@@ -7,6 +7,11 @@ import car2 from "@/assets/car2.png"
 import car3 from "@/assets/car3.png"
 import car4 from "@/assets/car4.png"
 import car5 from "@/assets/car5.png"
+import carmob1 from "@/assets/carmob1.png"
+import carmob2 from "@/assets/carmob2.png"
+import carmob3 from "@/assets/carmob3.png"
+import carmob4 from "@/assets/carmob4.png"
+import carmob5 from "@/assets/carmob5.png"
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Button from "../Shared/Button";
@@ -62,40 +67,40 @@ const Header = () => {
           <HomepageCarouselItem
             title="SHOP NEW COLLECTION 02"
             desktopImageSrc={car1}
-            mobileImageSrc={car1}
+            mobileImageSrc={carmob1}
             buttonText="See more"
             buttonUrl="/store"
           />
           <HomepageCarouselItem
             title=""
             desktopImageSrc={car2}
-            mobileImageSrc={car2}
+            mobileImageSrc={carmob2}
             buttonText=""
             buttonUrl=""
           />
           <HomepageCarouselItem
             title=""
             desktopImageSrc={car3}
-            mobileImageSrc={car3}
+            mobileImageSrc={carmob3}
             buttonText="See more"
             buttonUrl="/store"
           />
           <HomepageCarouselItem
             title=""
             desktopImageSrc={car4}
-            mobileImageSrc={car4}
+            mobileImageSrc={carmob4}
             buttonText="See more"
             buttonUrl="/store"
           />
           <HomepageCarouselItem
             title=""
             desktopImageSrc={car5}
-            mobileImageSrc={car5}
+            mobileImageSrc={carmob5}
             buttonText="See more"
             buttonUrl="/store"
           />
         </Carousel>
-        <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[60px]">
+        <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[30px] sm:mx-[60px]">
           <div className="z-10 font-black text-white text-[20px] sm:text-[60px] text-left">
             SHOP COLLECTION 02
           </div>
