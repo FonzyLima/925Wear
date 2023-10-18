@@ -46,7 +46,9 @@ export default function Shop() {
     <div className="flex flex-col justify-between bg-white w-full px-[60px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
       <div className="w-full flex flex-row justify-between sm:justify-end">
         <div className="flex flex-col">
-          <div className="text-[28px] sm:text-[60px] font-bold">SHOP COLLECTION 02</div>
+          <div className="text-[28px] sm:text-[60px] font-bold">
+            SHOP COLLECTION 02
+          </div>
           <Button
             classN="mt-[0px]"
             text="Order Now"
