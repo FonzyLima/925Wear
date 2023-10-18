@@ -14,9 +14,9 @@ const HomeStory = () => {
           <div className="flex flex-col gap-[40px] justify-center items-center">
             <div className="flex flex-col sm:flex-row gap-[30px] w-full">
               {aboutImages.map((items, i) => (
-                <div className="rounded-full sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
+                <div key={i} className="rounded-full sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
                   <Image
-                    key={i}
+                    
                     src={items.image}
                     alt="storyimg"
                     // objectFit="cover"
