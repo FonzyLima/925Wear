@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
       <html lang="en">
-        <body>
+        <body className="font-primary">
           <Nav />
           {children}
           <div className="mb-[350px] -z-30 w-full"></div>
