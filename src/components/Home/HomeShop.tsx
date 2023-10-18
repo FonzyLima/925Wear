@@ -5,13 +5,31 @@ import Card from "@/components/Shared/Card";
 
 import Button from "../Shared/Button";
 
-const HomeShop = ({ products }) => {
+interface IProducts {
+  fields: any;
+  items: IProducts[];
+  includes: {
+    Asset: {
+      sys: {
+        id: string;
+      };
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    }[];
+  };
+}
+
+const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const [currentMargin, setCurrentMargin] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(0);
   const [slidesCount, setSlidesCount] = useState(0);
 
   useEffect(() => {
+    console.log(products);
     // Update the number of slides and margins on resize
     const checkWidth = () => {
       const containerWidth = window.innerWidth;
@@ -26,7 +44,7 @@ const HomeShop = ({ products }) => {
     };
   }, []);
 
-  const setParams = (w) => {
+  const setParams = (w: number) => {
     let newSlidesPerPage = 1;
     if (w >= 551 && w < 901) newSlidesPerPage = 2;
     else if (w >= 901 && w < 1101) newSlidesPerPage = 3;
