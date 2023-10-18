@@ -5,9 +5,7 @@ import Card from "@/components/Shared/Card";
 
 import Button from "../Shared/Button";
 
-
-const HomeShop = ({products}) => {
-
+const HomeShop = ({ products }) => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const [currentMargin, setCurrentMargin] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(0);
@@ -41,13 +39,13 @@ const HomeShop = ({products}) => {
       setCurrentPosition(currentPosition - newSlidesPerPage);
     }
 
-    const newCurrentMargin = -currentPosition * (100 / newSlidesPerPage);
+    const newCurrentMargin = -currentPosition * 370;
     setCurrentMargin(newCurrentMargin);
   };
 
   const slideRight = () => {
     if (currentPosition !== 0) {
-      const newMargin = currentMargin + 100 / slidesPerPage;
+      const newMargin = currentMargin + 370;
       setCurrentMargin(newMargin);
       setCurrentPosition(currentPosition - 1);
     }
@@ -55,7 +53,7 @@ const HomeShop = ({products}) => {
 
   const slideLeft = () => {
     if (currentPosition !== slidesCount) {
-      const newMargin = currentMargin - 100 / slidesPerPage;
+      const newMargin = currentMargin - 370;
       setCurrentMargin(newMargin);
       setCurrentPosition(currentPosition + 1);
     }
@@ -69,7 +67,7 @@ const HomeShop = ({products}) => {
         <div className="w-full bg-beige flex items-center justify-center px-[40px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
           <div className="flex flex-col sm:flex-row justify-between w-full items-center">
             <div className="text-[22px] sm:text-[60px] font-bold text-black">
-              EXPLORE THE COLLECTION 
+              EXPLORE THE COLLECTION
             </div>
             <div className="hidden sm:flex flex-row gap-[10px]">
               <button
@@ -90,31 +88,31 @@ const HomeShop = ({products}) => {
               </button>
             </div>
           </div>
-          <div className="hidden sm:flex sm:container">
-            <div className="slider-container">
+          <div className="w-full">
+            <div className="slider-container relative overflow-x-auto sm:overflow-visible">
               <div
-                className="slider"
-                style={{ marginLeft: `${currentMargin}%` }}
+                className="slider flex flex-row gap-[20px] w-full duration-300"
+                style={{ marginLeft: `${currentMargin}px` }}
               >
-                {products.items.map((product,i)=>(
+                {products.items.map((product, i) => (
                   <>
-                  <div key={i} className="slide">
-                  {products.includes.Asset.map((a) => (
-                <div key={a.sys.id}>
-                  {product.fields.image.sys.id == a.sys.id ? (
-                    <Card  title={product.fields.name} price={`PHP ${product.fields.price}`} image={"https:" + a.fields.file.url}/>
-                    
-                  ) : (
-                    <div></div>
-                  )}
-                </div>
-              ))}
-                    
+                    <div key={i} className="slide">
+                      {products.includes.Asset.map((a) => (
+                        <div key={a.sys.id}>
+                          {product.fields.image.sys.id == a.sys.id ? (
+                            <Card
+                              title={product.fields.name}
+                              price={`PHP ${product.fields.price}`}
+                              image={"https:" + a.fields.file.url}
+                            />
+                          ) : (
+                            <div></div>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </>
-                  
                 ))}
-                
               </div>
             </div>
           </div>

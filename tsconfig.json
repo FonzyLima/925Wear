@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/products/[product]/page.jsx", "src/components/Home/HomeShop.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/products/[product]/page.jsx", "src/components/Home/HomeShop.tsx"],
   "exclude": ["node_modules"]
 }

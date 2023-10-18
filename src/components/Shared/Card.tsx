@@ -11,9 +11,9 @@ interface CardProps {
 
 const Card = ({ title, price, image, link = "" }: CardProps) => {
   return (
-    <Link href={link} className="group">
-      <div className="w-full flex flex-col font-primary ">
-        <div className="w-full h-[450px]">
+    <Link href="/store" className="group">
+      <div className="flex flex-col font-primary w-[200px] sm:w-[350px]">
+        <div className="h-[300px] sm:h-[450px] w-full">
           <Image
             src={image}
             alt="item"
@@ -21,8 +21,7 @@ const Card = ({ title, price, image, link = "" }: CardProps) => {
             // layout="fill"
             width={411}
             height={600}
-         
-            className="rounded-[30px] object-cover h-full group-hover:rounded-[70px] duration-300"
+            className="rounded-[30px] object-cover h-full w-full group-hover:rounded-[70px] duration-300 border-[1px] border-black"
           />
         </div>
         <div className="py-[10px] px-[14px]">

@@ -21,7 +21,7 @@ const Header = () => {
     <>
       <div className="relative w-full pt-[95px] px-[40px] bg-white font-primary">
         <Carousel
-          className="w-full flex justify-center relative overflow-hidden h-full rounded-[30px]"
+          className="w-full flex justify-center relative overflow-hidden h-full rounded-[30px] border-[1px] border-black"
           autoPlay={true}
           interval={4000}
           infiniteLoop={true}
