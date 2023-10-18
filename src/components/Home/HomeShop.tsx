@@ -29,7 +29,6 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
   const [slidesCount, setSlidesCount] = useState(0);
 
   useEffect(() => {
-    console.log(products);
     // Update the number of slides and margins on resize
     const checkWidth = () => {
       const containerWidth = window.innerWidth;

@@ -2,6 +2,24 @@
 import Card from "@/components/Shared/Card";
 import Button from "@/components/Shared/Button";
 import { useState, useEffect } from "react";
+
+interface IProducts {
+  fields: any;
+  items: IProducts[];
+  includes: {
+    Asset: {
+      sys: {
+        id: string;
+      };
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    }[];
+  };
+}
+
 const getProduct = async () => {
   const res = await fetch(
     `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?access_token=${process.env.CONTENTFUL_ACCESS_KEY}&content_type=product`,
@@ -16,7 +34,7 @@ const getProduct = async () => {
 };
 
 export default function Shop() {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState<IProducts | null>(null);
   const [page, setPage] = useState(0);
   const fetchProducts = async () => {
     try {
