@@ -15,13 +15,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Nav />
-        {children}
-        <div className="mb-[350px] -z-30 w-full"></div>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
+      <html lang="en">
+        <body>
+          <Nav />
+          {children}
+          <div className="mb-[350px] -z-30 w-full"></div>
+          <Footer />
+        </body>
+      </html>
+    </>
   );
 }
