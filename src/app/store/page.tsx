@@ -143,7 +143,7 @@ export default function Shop() {
         </div>
       ))} */}
       {/* </div> */}
-      <div className="flex flex-row gap-[10px] justify-end mt-[46px]">
+      <div className="flex flex-row gap-[10px] justify-end mt-[46px] font-brand">
         <button
           onClick={backPage}
           className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black`}

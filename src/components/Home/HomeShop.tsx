@@ -88,7 +88,7 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
             <div className="text-[22px] sm:text-[60px] font-bold text-black">
               EXPLORE THE COLLECTION
             </div>
-            <div className="hidden sm:flex flex-row gap-[10px]">
+            <div className="hidden sm:flex flex-row gap-[10px] font-brand">
               <button
                 onClick={slideRight}
                 className={`btn text-[40px] text-black bg-yellowgreen rounded-full w-[78px] h-[78px] border-black border-[1px] duration-300 hover:text-yellowgreen hover:border-yellowgreen hover:bg-black ${
