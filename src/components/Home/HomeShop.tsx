@@ -28,6 +28,8 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
   const [slidesPerPage, setSlidesPerPage] = useState(0);
   const [slidesCount, setSlidesCount] = useState(0);
 
+  const widthCard = 400;
+
   useEffect(() => {
     // Update the number of slides and margins on resize
     const checkWidth = () => {
@@ -56,13 +58,13 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
       setCurrentPosition(currentPosition - newSlidesPerPage);
     }
 
-    const newCurrentMargin = -currentPosition * 370;
+    const newCurrentMargin = -currentPosition * widthCard;
     setCurrentMargin(newCurrentMargin);
   };
 
   const slideRight = () => {
     if (currentPosition !== 0) {
-      const newMargin = currentMargin + 370;
+      const newMargin = currentMargin + widthCard;
       setCurrentMargin(newMargin);
       setCurrentPosition(currentPosition - 1);
     }
@@ -70,7 +72,7 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
 
   const slideLeft = () => {
     if (currentPosition !== slidesCount) {
-      const newMargin = currentMargin - 370;
+      const newMargin = currentMargin - widthCard;
       setCurrentMargin(newMargin);
       setCurrentPosition(currentPosition + 1);
     }

@@ -12,8 +12,8 @@ interface CardProps {
 const Card = ({ title, price, image, link = "" }: CardProps) => {
   return (
     <Link href="/store" className="group">
-      <div className="flex flex-col font-primary w-[200px] sm:w-[350px]">
-        <div className="h-[300px] sm:h-[450px] w-full">
+      <div className="flex flex-col font-primary w-[200px] sm:w-[380px]">
+        <div className="h-[300px] sm:h-[360px] w-full">
           <Image
             src={image}
             alt="item"
