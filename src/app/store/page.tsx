@@ -61,7 +61,7 @@ export default function Shop() {
     }
   };
   return (
-    <div className="flex flex-col justify-between bg-white w-full px-[60px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
+    <div className="flex flex-col justify-between bg-white w-full px-[100px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
       <div className="w-full flex flex-row justify-between sm:justify-end">
         <div className="flex flex-col">
           <div className="text-[28px] sm:text-[60px] font-bold">
@@ -77,8 +77,8 @@ export default function Shop() {
         </div>
       </div>
 
-      <div className="w-full mt-[46px] flex flex-col gap-[20px]">
-        <div className="w-full flex flex-col sm:flex-row justify-between gap-[20px]">
+      <div className="w-full mt-[46px] flex flex-col justify-center items-center gap-[20px]">
+        <div className="w-full flex flex-col justify-center items-center sm:flex-row gap-[20px]">
           {products == null
             ? null
             : products.items
@@ -101,7 +101,7 @@ export default function Shop() {
                   </div>
                 ))}
         </div>
-        <div className="w-full flex flex-col sm:flex-row justify-between gap-[20px]">
+        <div className="w-full flex flex-col justify-center items-center sm:flex-row gap-[20px]">
           {products == null
             ? null
             : products.items
