@@ -1,16 +1,17 @@
 import Link from "next/link";
 import LinkComp from "./LinkComp";
-import whiteLogo from "@/assets/whitelogo.png"
+import whiteLogo from "@/assets/whitelogo.png";
 import Image from "next/image";
+import footerlogo from "@/assets/images/footer-logo.png";
 const Footer = () => {
   return (
     <>
       <nav className="-z-20 w-screen fixed top-0 bg-yellowgreen px-[40px] py-[55px] flex flex-col sm:flex-row justify-between items-end h-screen">
-        <div className="invisible sm:visible flex tracking-[-52.964px] text-white font-bold text-[250px] sm:leading-[85%] max-h-[380px] font-brand">
-          925
+        <div className="w-[400px]">
+          <Image className="" src={footerlogo} alt="footer-logo" />
         </div>
         <div className="sm:hidden mb-[40px]">
-        <Image className="" src={whiteLogo} alt="circle" />
+          <Image className="" src={footerlogo} alt="footer-logo" />
         </div>
         <ul className="hidden sm:flex sm:gap-[70px] text-[16px] flex-col sm:flex-row font-primary">
           <li>

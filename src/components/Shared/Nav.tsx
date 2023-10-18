@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import LinkComp from "./LinkComp";
+import Image from "next/image";
+import navlogo from "@/assets/images/nav-logo.png"
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -38,8 +40,8 @@ const Nav = () => {
           hideNavbar ? "hidden-nav" : ""
         }`}
       >
-        <div className="tracking-[-8.2px] text-yellowgreen font-bold text-[40px] font-brand">
-          925
+        <div className="w-[70px] h-[60px] flex justify-center items-center">
+          <Image className="w-full object-cover" src={navlogo} alt="logo" />
         </div>
         <ul className="gap-[20px] text-[16px] flex-row flex font-primary font-medium">
           <li>

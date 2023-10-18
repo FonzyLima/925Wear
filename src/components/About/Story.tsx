@@ -88,7 +88,7 @@ const Story = () => {
         </div>
         <div className="flex flex-col justify-center items-center sm:flex-row gap-[20px] sm:gap-[40px]">
           <div className="sm:w-2/5">
-            <Image className="rounded-[50px]" src={abwear} alt="circle" />
+            <Image className="rounded-[50px] border-black border-[1px]" src={abwear} alt="circle" />
           </div>
           <div className="flex flex-col gap-[10px] sm:gap-[30px] sm:w-3/5">
             <div className="text-[14px] sm:text-[20px] text-justify font-primary">
