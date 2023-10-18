@@ -5,6 +5,8 @@ import ab2 from "@/assets/ab2.jpg";
 import ab3 from "@/assets/ab3.jpg";
 import abstudio from "@/assets/abstudio.png";
 import abwear from "@/assets/abwear.png";
+import { aboutImages } from "@/fixed/fixedImages";
+
 const Story = () => {
   return (
     <div className="bg-white w-full px-[40px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
@@ -13,7 +15,19 @@ const Story = () => {
           ABOUT THE BRAND
         </div>
         <div className="flex flex-col sm:flex-row gap-[30px] w-full">
-          <div className="rounded-full hidden sm:flex sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
+          {aboutImages.map((items, i) => (
+            <div className="rounded-full sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
+              <Image
+                key={i}
+                src={items.image}
+                alt="storyimg"
+                // objectFit="cover"
+                // layout="fill"
+                className=" object-cover h-full"
+              />
+            </div>
+          ))}
+          {/* <div className="rounded-full hidden sm:flex sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
             <Image
               src={ab1}
               alt="storyimg"
@@ -39,7 +53,7 @@ const Story = () => {
               // layout="fill"
               className=" object-cover h-full"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className=" text-[14px] sm:text-[30px] text-justify font-primary">

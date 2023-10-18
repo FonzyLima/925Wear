@@ -1,17 +1,7 @@
 "use client";
-import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
-import car1 from "@/assets/car1.png"
-import car2 from "@/assets/car2.png"
-import car3 from "@/assets/car3.png"
-import car4 from "@/assets/car4.png"
-import car5 from "@/assets/car5.png"
-import carmob1 from "@/assets/carmob1.png"
-import carmob2 from "@/assets/carmob2.png"
-import carmob3 from "@/assets/carmob3.png"
-import carmob4 from "@/assets/carmob4.png"
-import carmob5 from "@/assets/carmob5.png"
+import { CarouselImages } from "@/fixed/fixedImages";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Button from "../Shared/Button";
@@ -64,41 +54,16 @@ const Header = () => {
             )
           }
         >
-          <HomepageCarouselItem
-            title="SHOP NEW COLLECTION 02"
-            desktopImageSrc={car1}
-            mobileImageSrc={carmob1}
-            buttonText="See more"
-            buttonUrl="/store"
-          />
-          <HomepageCarouselItem
-            title=""
-            desktopImageSrc={car2}
-            mobileImageSrc={carmob2}
-            buttonText=""
-            buttonUrl=""
-          />
-          <HomepageCarouselItem
-            title=""
-            desktopImageSrc={car3}
-            mobileImageSrc={carmob3}
-            buttonText="See more"
-            buttonUrl="/store"
-          />
-          <HomepageCarouselItem
-            title=""
-            desktopImageSrc={car4}
-            mobileImageSrc={carmob4}
-            buttonText="See more"
-            buttonUrl="/store"
-          />
-          <HomepageCarouselItem
-            title=""
-            desktopImageSrc={car5}
-            mobileImageSrc={carmob5}
-            buttonText="See more"
-            buttonUrl="/store"
-          />
+          {CarouselImages.map((items, i) => (
+            <HomepageCarouselItem
+              key={i}
+              title=""
+              desktopImageSrc={items.header}
+              mobileImageSrc={items.headermob}
+              buttonText="See more"
+              buttonUrl="/store"
+            />
+          ))}
         </Carousel>
         <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[30px] sm:mx-[60px]">
           <div className="z-10 font-black text-white text-[20px] sm:text-[60px] text-left">
@@ -130,6 +95,7 @@ function HomepageCarouselItem({
 }: IHomepageCarousel) {
   return (
     <div className="flex flex-col border min-h-[500px] items-start h-full justify-center align-middle text-center overflow-hidden">
+      <div className="w-full h-full bg-black z-20 opacity-10"></div>
       {/* <div className="flex flex-col justify-center items-start z-10 h-full px-[60px]">
         <div className="z-10 font-black text-white text-[60px] text-left">
           {title}
