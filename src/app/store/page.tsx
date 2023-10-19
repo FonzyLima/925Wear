@@ -36,6 +36,7 @@ const getProduct = async () => {
 export default function Shop() {
   const [products, setProducts] = useState<IProducts | null>(null);
   const [page, setPage] = useState(0);
+  const [pageEnd, setPageEnd] = useState(1);
   const fetchProducts = async () => {
     try {
       const productsData = await getProduct();
@@ -49,22 +50,25 @@ export default function Shop() {
   useEffect(() => {
     fetchProducts();
     console.log(products);
+    console.log(page);
   }, [products]);
   const nextPage = () => {
     if (page < 4) {
       setPage(page + 2);
+      setPageEnd(pageEnd + 1);
     }
   };
   const backPage = () => {
     if (page > 0) {
       setPage(page - 2);
+      setPageEnd(pageEnd - 1);
     }
   };
   return (
-    <div className="flex flex-col justify-between bg-white w-full px-[100px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
-      <div className="w-full flex flex-row justify-between sm:justify-end">
-        <div className="flex flex-col">
-          <div className="text-[28px] sm:text-[60px] font-bold">
+    <div className="flex flex-col justify-between bg-white w-full px-[50px] sm:px-[100px] pt-[100px] pb-[40px] rounded-br-[50px] rounded-bl-[50px]">
+      <div className="w-full flex flex-row justify-between sm:justify-start">
+        <div className="flex flex-col gap-[10px] lg:gap-0">
+          <div className="leading-[40px] sm:leading-[50px] lg:leading-normal text-[40px] sm:text-[50px] lg:text-[60px] font-bold">
             SHOP COLLECTION 02
           </div>
           <Button
@@ -78,11 +82,32 @@ export default function Shop() {
       </div>
 
       <div className="w-full mt-[46px] flex flex-col justify-center items-center gap-[20px]">
-        <div className="w-full flex flex-col justify-center items-center sm:flex-row gap-[20px]">
+        <div className="w-full flex flex-col justify-center items-center sm:flex-row flex-wrap gap-[20px]">
+          {products == null
+            ? null
+            : products.items.slice(page * 3, pageEnd * 6).map((product, i) => (
+                <div key={product.fields.name} className="">
+                  {products.includes.Asset.map((a) => (
+                    <div key={a.sys.id}>
+                      {product.fields.image.sys.id == a.sys.id ? (
+                        <Card
+                          title={product.fields.name}
+                          price={`PHP ${product.fields.price}`}
+                          image={"https:" + a.fields.file.url}
+                        />
+                      ) : (
+                        <div></div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ))}
+        </div>
+        {/* <div className="w-full flex flex-col justify-center items-center sm:flex-row gap-[20px] flex-wrap">
           {products == null
             ? null
             : products.items
-                .slice(page * 3, (page + 1) * 3)
+                .slice((page + 1) * 6, (page + 2) * 6)
                 .map((product, i) => (
                   <div key={product.fields.name} className="">
                     {products.includes.Asset.map((a) => (
@@ -100,30 +125,7 @@ export default function Shop() {
                     ))}
                   </div>
                 ))}
-        </div>
-        <div className="w-full flex flex-col justify-center items-center sm:flex-row gap-[20px]">
-          {products == null
-            ? null
-            : products.items
-                .slice((page + 1) * 3, (page + 2) * 3)
-                .map((product, i) => (
-                  <div key={product.fields.name} className="">
-                    {products.includes.Asset.map((a) => (
-                      <div key={a.sys.id}>
-                        {product.fields.image.sys.id == a.sys.id ? (
-                          <Card
-                            title={product.fields.name}
-                            price={`PHP ${product.fields.price}`}
-                            image={"https:" + a.fields.file.url}
-                          />
-                        ) : (
-                          <div></div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ))}
-        </div>
+        </div> */}
       </div>
       {/* <div className="px-[100px] mt-[46px] flex flex-col gap-[20px]">
       {products == null ? null : Array.from({length:2},(v,rowIndex)=>(
