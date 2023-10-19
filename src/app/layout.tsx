@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <>
       <head>
-        <meta property="og:image:secure" content="/preview.jpg" key="ogimage" />
+        <meta property="og:image" content="/preview.jpg" key="ogimage" />
         <link rel="icon" href="/favicon.png" />
       </head>
       <html lang="en">
