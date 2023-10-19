@@ -24,7 +24,7 @@ export default function RootLayout({
         <body className="font-primary">
           <Nav />
           {children}
-          <div className="mb-[350px] -z-30 w-full"></div>
+          <div className="mb-[350px] -z-30 w-full max-[560px]:mb-[400px]"></div>
           <Footer />
         </body>
       </html>
