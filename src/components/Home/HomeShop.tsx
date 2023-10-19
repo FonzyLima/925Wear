@@ -83,9 +83,9 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
   return (
     <>
       <div className="bg-beige w-full flex flex-col items-center justify-center">
-        <div className="w-full bg-beige flex items-center justify-center px-[100px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
+        <div className="w-full bg-beige flex items-center justify-center mx-[50px] sm:px-[100px] py-[55px] gap-[40px] flex-col max-w-[1800px]">
           <div className="flex flex-col sm:flex-row justify-between w-full items-center">
-            <div className="text-[22px] sm:text-[60px] font-bold text-black">
+            <div className="leading-[40px] mx-[50px] sm:mx-0 sm:leading-[50px] lg:leading-[60px] text-[40px] sm:text-[50px] lg:text-[60px] font-bold text-black">
               EXPLORE THE COLLECTION
             </div>
             <div className="hidden sm:flex flex-row gap-[10px] font-brand">
@@ -107,8 +107,8 @@ const HomeShop: React.FC<{ products: IProducts }> = ({ products }) => {
               </button>
             </div>
           </div>
-          <div className="w-full">
-            <div className="slider-container relative overflow-x-auto sm:overflow-visible">
+          <div className="w-full pl-[50px] sm:pl-0">
+            <div className="slider-container relative sm:overflow-visible overflow-scroll no-scrollbar">
               <div
                 className="slider flex flex-row gap-[20px] w-full duration-300"
                 style={{ marginLeft: `${currentMargin}px` }}

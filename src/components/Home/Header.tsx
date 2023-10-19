@@ -9,7 +9,7 @@ import Button from "../Shared/Button";
 const Header = () => {
   return (
     <>
-      <div className="relative w-full pt-[95px] px-[40px] bg-white font-primary">
+      <div className="relative w-full pt-[95px] px-[20px] sm:px-[40px] bg-white font-primary">
         <Carousel
           className="w-full flex justify-center relative overflow-hidden h-full rounded-[30px] border-[1px] border-black"
           autoPlay={true}
@@ -65,8 +65,8 @@ const Header = () => {
             />
           ))}
         </Carousel>
-        <div className="absolute top-0 mt-[280px] flex flex-col justify-center items-start z-10 mx-[30px] sm:mx-[60px]">
-          <div className="z-10 font-black text-white text-[20px] sm:text-[60px] text-left">
+        <div className="absolute top-0 mt-[260px] sm:mt-[300px] lg:mt-[280px] gap-[10px] lg:gap-0 flex flex-col justify-center items-start z-10 mx-[30px] sm:mx-[60px]">
+          <div className="z-10 font-black text-white leading-[40px] sm:leading-[50px] lg:leading-normal text-[40px] sm:text-[50px] lg:text-[60px] text-left">
             SHOP COLLECTION 02
           </div>
           <Button text="See more" variant="outline" link="/store" />

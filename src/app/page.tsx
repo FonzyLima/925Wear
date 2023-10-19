@@ -20,7 +20,7 @@ const getProduct = async () => {
 };
 export default async function Home() {
   const products = await getProduct();
-  console.log(typeof products.items);
+  // console.log(typeof products.items);
   return (
     <div className="overflow-hidden">
       <Header />

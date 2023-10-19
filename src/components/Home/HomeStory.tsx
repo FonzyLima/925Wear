@@ -6,17 +6,19 @@ import { aboutImages } from "@/fixed/fixedImages";
 const HomeStory = () => {
   return (
     <>
-      <div className="w-full bg-black flex items-center justify-center p-[40px] rounded-br-[50px] rounded-bl-[50px]">
-        <div className="border-white border-[1px] w-full px-[60px] py-[55px] rounded-[30px] flex flex-col gap-[40px]">
-          <div className="text-white font-bold text-[22px] sm:text-[60px]">
+      <div className="w-full bg-black flex items-center justify-center py-[20px] sm:py-[40px] px-[20px] sm:px-[40px] rounded-br-[50px] rounded-bl-[50px]">
+        <div className="border-white border-[1px] w-full px-[30px] sm:px-[60px] py-[55px] rounded-[30px] flex flex-col gap-[40px]">
+          <div className="text-white font-bold leading-[40px] sm:leading-[50px] lg:leading-normal text-[40px] sm:text-[50px] lg:text-[60px]">
             ABOUT THE BRAND
           </div>
           <div className="flex flex-col gap-[40px] justify-center items-center">
             <div className="flex flex-col sm:flex-row gap-[30px] w-full">
               {aboutImages.map((items, i) => (
-                <div key={i} className="rounded-full sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden">
+                <div
+                  key={i}
+                  className="rounded-full sm:w-1/3 h-[200px] sm:h-[380px] overflow-hidden"
+                >
                   <Image
-                    
                     src={items.image}
                     alt="storyimg"
                     // objectFit="cover"
@@ -26,7 +28,7 @@ const HomeStory = () => {
                 </div>
               ))}
             </div>
-            <div className="w-full text-justify text-[14px] sm:text-[20px] text-white font-primary">
+            <div className="w-full text-justify text-[16px] sm:text-[20px] text-white font-primary">
               925 was founded on the idea of doing work you love, or rather, the
               fear of not pursuing it. It isn&apos;t a knock on work culture or
               the day-to-day grind, in fact, it embraces it through its designs.
