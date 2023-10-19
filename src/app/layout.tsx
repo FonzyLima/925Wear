@@ -18,11 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Head>
+      <head>
+        <meta property="og:image:secure" content="/preview.jpg" key="ogimage" />
         <link rel="icon" href="/favicon.png" />
-        <meta property="og:image:secure" content="https://www.925studio.online/preview.jpg" key="ogimage" />
-        
-      </Head>
+      </head>
       <html lang="en">
         <body className="font-primary">
           <Nav />
