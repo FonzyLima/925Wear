@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="w-[400px] max-[560px]:w-full">
             <Image className="" src={footerlogo} alt="footer-logo" />
           </div>
-          <ul className="flex max-[560px]:flex-row gap-[10px] lg:gap-[70px] text-[16px] flex-col lg:flex-row font-primary max-[560px]:text-[14px] max-[560px]:w-full max-[560px]:justify-between max-[490px]:flex-col">
+          <ul className="flex max-[560px]:flex-row gap-[10px] lg:gap-[40px] text-[16px] flex-col lg:flex-row font-primary max-[560px]:text-[14px] max-[560px]:w-full max-[560px]:justify-between max-[490px]:flex-col">
             <li>
               <p className="font-bold">Email</p>
               <LinkComp
@@ -20,16 +20,16 @@ const Footer = () => {
                 text="925wear.ph@gmail.com"
               />
             </li>
-            <li>
+            {/* <li>
               <p className="font-bold">Call Us</p>
               <LinkComp variant="a" text="+639176380810" />
-            </li>
+            </li> */}
             <li>
               <p className="font-bold">Instagram</p>
               <LinkComp
                 variant="a"
                 link="https://www.instagram.com/925.wear/"
-                text="@925wear.ph"
+                text="@925wear"
               />
             </li>
           </ul>
