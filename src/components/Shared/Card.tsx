@@ -7,11 +7,18 @@ interface CardProps {
   price: string;
   image: HTMLImageElement | string | StaticImageData;
   link?: string;
+  target?: "_blank" | "_self";
 }
 
-const Card = ({ title, price, image, link = "" }: CardProps) => {
+const Card = ({
+  title,
+  price,
+  image,
+  link = "/store",
+  target = "_self",
+}: CardProps) => {
   return (
-    <Link href="/store" className="group">
+    <Link href={link} className="group" target={target}>
       <div className="flex flex-col font-primary w-[250px] sm:w-[380px]">
         <div className="h-[270px] sm:h-[360px] w-full">
           <Image
@@ -25,7 +32,9 @@ const Card = ({ title, price, image, link = "" }: CardProps) => {
           />
         </div>
         <div className="py-[10px] px-[14px]">
-          <div className="text-[18px] sm:text-[22px] leading-[22px] sm:leading-normal font-medium">{title}</div>
+          <div className="text-[18px] sm:text-[22px] leading-[22px] sm:leading-normal font-medium">
+            {title}
+          </div>
           <div className="text-[16px] sm:text-[20px] font-normal">{price}</div>
         </div>
       </div>

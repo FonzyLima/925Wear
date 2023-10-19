@@ -94,6 +94,8 @@ export default function Shop() {
                           title={product.fields.name}
                           price={`PHP ${product.fields.price}`}
                           image={"https:" + a.fields.file.url}
+                          link="https://form.jotform.com/232811090133444"
+                          target="_blank"
                         />
                       ) : (
                         <div></div>
