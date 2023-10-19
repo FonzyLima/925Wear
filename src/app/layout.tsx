@@ -1,12 +1,14 @@
 import "./globals.css";
-import "./fonts.css"
+import "./fonts.css";
 import type { Metadata } from "next";
 import Nav from "@/components/Shared/Nav";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "@/components/Shared/Footer";
+import Head from "next/head";
+import preview from "@/assets/images/preview.jpg";
 
 export const metadata: Metadata = {
-  title: "925Wear",
+  title: "925 WEAR",
   description: "Official Website for 925 Wear",
 };
 
@@ -17,9 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <head>
+      <Head>
         <link rel="icon" href="/favicon.png" />
-      </head>
+        <meta property="og:image" content="/preview.jpg" key="ogimage" />
+      </Head>
       <html lang="en">
         <body className="font-primary">
           <Nav />

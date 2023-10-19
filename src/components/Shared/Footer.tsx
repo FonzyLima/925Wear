@@ -29,7 +29,7 @@ const Footer = () => {
               <LinkComp
                 variant="a"
                 link="https://www.instagram.com/925.wear/"
-                text="@925wear"
+                text="@925.wear"
               />
             </li>
           </ul>
