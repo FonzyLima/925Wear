@@ -5,7 +5,6 @@ import Nav from "@/components/Shared/Nav";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "@/components/Shared/Footer";
 import Head from "next/head";
-import preview from "@/assets/images/preview.jpg";
 
 export const metadata: Metadata = {
   title: "925 WEAR",
@@ -21,7 +20,7 @@ export default function RootLayout({
     <>
       <Head>
         <link rel="icon" href="/favicon.png" />
-        <meta property="og:image" content="/preview.jpg" key="ogimage" />
+        <meta property="og:image:secure" content="/preview.jpg" key="ogimage" />
       </Head>
       <html lang="en">
         <body className="font-primary">
