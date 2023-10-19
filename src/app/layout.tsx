@@ -20,7 +20,8 @@ export default function RootLayout({
     <>
       <Head>
         <link rel="icon" href="/favicon.png" />
-        <meta property="og:image:secure" content="/preview.jpg" key="ogimage" />
+        <meta property="og:image:secure" content="https://www.925studio.online/preview.jpg" key="ogimage" />
+        
       </Head>
       <html lang="en">
         <body className="font-primary">
